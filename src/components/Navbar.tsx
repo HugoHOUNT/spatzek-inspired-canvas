@@ -12,6 +12,7 @@ const navItems: NavItem[] = [
   { label: 'Accueil', href: '#home' },
   { label: 'Projets', href: '#projects' },
   { label: 'Parcours', href: '#experience' },
+  { label: 'Compétences', href: '#skills' },
   { label: 'Centres d\'intérêt', href: '#interests' },
   { label: 'Contact', href: '#contact' }
 ];
@@ -64,7 +65,7 @@ const Navbar = () => {
     )}>
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="flex items-center gap-2">
-          <span className="text-xl font-bold text-gradient">Portfolio</span>
+          <span className="text-xl font-bold text-gradient">Hugo Hountondji</span>
         </div>
 
         {/* Desktop navigation */}

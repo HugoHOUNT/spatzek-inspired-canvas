@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { ChevronDown, Github, Linkedin, Mail, Camera, Database, BrainCircuit, BarChart4, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -10,34 +9,34 @@ import Navbar from '@/components/Navbar';
 const projects = [
   {
     id: 1,
-    title: "Analyse prédictive de données massives",
+    title: "Analyse prédictive des données clients",
     category: "Big Data & IA",
-    description: "Développement d'un système de prédiction basé sur des algorithmes d'apprentissage automatique pour anticiper les tendances du marché.",
+    description: "Développement d'un système de prédiction basé sur des algorithmes d'apprentissage automatique pour anticiper les comportements clients et optimiser les campagnes marketing.",
     tags: ["Python", "TensorFlow", "Hadoop", "Spark"],
     icon: <BrainCircuit className="w-8 h-8 text-indigo-400" />
   },
   {
     id: 2,
-    title: "Visualisation interactive de données complexes",
+    title: "Dashboard de suivi de performance",
     category: "Data Visualisation",
-    description: "Création d'un tableau de bord interactif permettant d'explorer et comprendre des ensembles de données multidimensionnels.",
+    description: "Création d'un tableau de bord interactif permettant de suivre en temps réel les performances des campagnes marketing et d'en extraire des insights actionnables.",
     tags: ["D3.js", "React", "SQL", "Tableau"],
     icon: <BarChart4 className="w-8 h-8 text-purple-400" />
   },
   {
     id: 3,
-    title: "Traitement du langage naturel",
-    category: "IA & NLP",
-    description: "Mise en place d'un système d'analyse sémantique pour extraire automatiquement les informations pertinentes de documents textuels.",
-    tags: ["BERT", "Python", "SpaCy", "NLP"],
+    title: "Automatisation du reporting",
+    category: "IA & Analyse de données",
+    description: "Mise en place d'un système automatisé d'extraction et d'analyse des données pour faciliter la prise de décision et optimiser les processus internes.",
+    tags: ["Python", "Pandas", "PowerBI", "Automation"],
     icon: <Sparkles className="w-8 h-8 text-pink-400" />
   },
   {
     id: 4,
-    title: "Système de recommandation personnalisé",
-    category: "Machine Learning",
-    description: "Développement d'un algorithme de recommandation basé sur les préférences utilisateurs et leur historique d'interaction.",
-    tags: ["Python", "Scikit-learn", "MongoDB", "API"],
+    title: "Migration vers une architecture Big Data",
+    category: "Big Data",
+    description: "Participation à la migration des systèmes existants vers une architecture Big Data, incluant la mise en place d'un data lake et l'optimisation des flux de données.",
+    tags: ["Hadoop", "Spark", "MongoDB", "ETL"],
     icon: <Database className="w-8 h-8 text-indigo-400" />
   },
 ];
@@ -46,24 +45,24 @@ const projects = [
 const experiences = [
   {
     id: 1,
-    title: "Data Scientist Senior",
-    company: "Entreprise Tech",
-    period: "2021 - Présent",
-    description: "Conception et implémentation de modèles d'apprentissage automatique. Analyse de grands volumes de données pour en extraire des insights stratégiques."
+    title: "Data & Web Analyst",
+    company: "D-Rating",
+    period: "Sept 2022 - Présent",
+    description: "Conception, développement et maintenance de tableaux de bord analytiques. Extraction et analyse de données pour évaluer la transformation digitale des entreprises. Automatisation des processus de collecte et traitement de données."
   },
   {
     id: 2,
-    title: "Analyste de données",
-    company: "Agence Digitale",
-    period: "2018 - 2021",
-    description: "Développement de tableaux de bord analytiques. Optimisation des stratégies marketing basées sur les données clients."
+    title: "Chef de Projet Digital",
+    company: "Matrice",
+    period: "Jan 2022 - Août 2022",
+    description: "Gestion de projets digitaux et innovation. Création et analyse de KPIs, réalisation de dashboards et reporting pour le suivi des performances."
   },
   {
     id: 3,
-    title: "Master en Science des Données",
-    company: "Université de Technologie",
-    period: "2016 - 2018",
-    description: "Spécialisation en intelligence artificielle et systèmes d'aide à la décision. Projet de fin d'études sur les algorithmes prédictifs."
+    title: "Master 2 en Intelligence Artificielle et Big Data",
+    company: "EFREI Paris",
+    period: "2022 - 2023",
+    description: "Formation en alternance spécialisée en intelligence artificielle, machine learning, deep learning et technologies Big Data. Projets pratiques sur le traitement de données massives."
   },
 ];
 
@@ -113,10 +112,10 @@ const Index = () => {
       <section id="home" className="min-h-screen flex flex-col justify-center items-center relative px-6 py-24 md:py-0">
         <div className="max-w-4xl mx-auto text-center z-10">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-slide-down">
-            <span className="text-gradient">Portfolio</span> IA & Data
+            <span className="text-gradient">Hountondji Hugo</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-300 animate-slide-up">
-            Expert en Intelligence Artificielle, Big Data et Data Visualisation
+            Expert en Intelligence Artificielle, Big Data et Data Analyse
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-12 animate-fade-in">
             <Button 
@@ -165,7 +164,7 @@ const Index = () => {
             Mes <span className="text-gradient">Projets</span>
           </h2>
           <p className="text-xl text-gray-400 mb-12 animate-on-scroll stagger-delay-1">
-            Découvrez mes réalisations en IA, Big Data et Data Visualisation
+            Découvrez mes réalisations en IA, Big Data et Data Analyse
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -243,6 +242,55 @@ const Index = () => {
 
       <SectionDivider />
 
+      {/* Skills section */}
+      <section id="skills" className="py-20 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-2 animate-on-scroll">
+            Mes <span className="text-gradient">Compétences</span>
+          </h2>
+          <p className="text-xl text-gray-400 mb-12 animate-on-scroll stagger-delay-1">
+            Technologies et outils que je maîtrise
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-on-scroll">
+            <div className="glass-panel p-6 transition-all duration-300 hover:translate-y-[-5px]">
+              <h3 className="text-xl font-semibold mb-4 text-portfolio-accent">Langages & Frameworks</h3>
+              <div className="flex flex-wrap gap-3">
+                {["Python", "R", "SQL", "JavaScript", "React", "HTML/CSS"].map(skill => (
+                  <span key={skill} className="px-3 py-1.5 bg-white/10 rounded-full text-sm">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+            
+            <div className="glass-panel p-6 transition-all duration-300 hover:translate-y-[-5px]">
+              <h3 className="text-xl font-semibold mb-4 text-portfolio-accent">Big Data & IA</h3>
+              <div className="flex flex-wrap gap-3">
+                {["Hadoop", "Spark", "MongoDB", "TensorFlow", "Machine Learning", "Deep Learning"].map(skill => (
+                  <span key={skill} className="px-3 py-1.5 bg-white/10 rounded-full text-sm">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+            
+            <div className="glass-panel p-6 transition-all duration-300 hover:translate-y-[-5px]">
+              <h3 className="text-xl font-semibold mb-4 text-portfolio-accent">Outils & Plateformes</h3>
+              <div className="flex flex-wrap gap-3">
+                {["Tableau", "PowerBI", "Google Analytics", "Google Tag Manager", "Excel", "Git"].map(skill => (
+                  <span key={skill} className="px-3 py-1.5 bg-white/10 rounded-full text-sm">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <SectionDivider />
+
       {/* Interests section */}
       <section id="interests" ref={interestsRef} className="py-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
@@ -298,25 +346,25 @@ const Index = () => {
           <div className="max-w-lg mx-auto glass-panel p-8 animate-on-scroll stagger-delay-2">
             <div className="flex flex-col gap-6">
               <a 
-                href="mailto:contact@example.com" 
+                href="mailto:hugo.hountondji@efrei.net" 
                 className="flex items-center gap-3 text-gray-300 hover:text-portfolio-accent transition-colors"
               >
                 <Mail className="w-5 h-5" />
-                <span>contact@example.com</span>
+                <span>hugo.hountondji@efrei.net</span>
               </a>
               <a 
                 href="#" 
                 className="flex items-center gap-3 text-gray-300 hover:text-portfolio-accent transition-colors"
               >
                 <Linkedin className="w-5 h-5" />
-                <span>linkedin.com/in/username</span>
+                <span>linkedin.com/in/hugo-hountondji</span>
               </a>
               <a 
                 href="#" 
                 className="flex items-center gap-3 text-gray-300 hover:text-portfolio-accent transition-colors"
               >
                 <Github className="w-5 h-5" />
-                <span>github.com/username</span>
+                <span>github.com/hugo-hountondji</span>
               </a>
             </div>
           </div>
@@ -326,7 +374,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-8 px-6 text-center border-t border-white/10">
         <p className="text-gray-400">
-          © {new Date().getFullYear()} Portfolio IA & Data. Tous droits réservés.
+          © {new Date().getFullYear()} Hountondji Hugo. Tous droits réservés.
         </p>
       </footer>
     </div>
