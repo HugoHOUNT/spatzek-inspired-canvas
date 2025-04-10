@@ -27,12 +27,34 @@
     --radius: 0.5rem;
   }
 
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 91.2% 59.8%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+  }
+
   * {
     @apply border-border;
   }
 
   body {
-    @apply bg-portfolio-dark text-portfolio-light;
+    @apply bg-portfolio-light dark:bg-portfolio-dark text-portfolio-dark dark:text-portfolio-light;
     font-feature-settings: "rlig" 1, "calt" 1;
     overscroll-behavior-y: none;
   }
@@ -43,52 +65,25 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #121212;
+    @apply bg-gray-100 dark:bg-gray-900;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #4b5563;
-    border-radius: 3px;
+    @apply bg-gray-400 dark:bg-gray-600 rounded;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #6366f1;
+    @apply bg-indigo-500 dark:bg-indigo-600;
   }
 
   /* Portfolio-specific styles */
   .text-gradient {
-    @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 dark:from-indigo-500 dark:via-purple-500 dark:to-pink-500 bg-clip-text text-transparent;
   }
 
   .glass-panel {
-    @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl;
+    @apply bg-white/50 dark:bg-white/5 backdrop-blur-lg border border-gray-200/50 dark:border-white/10 rounded-xl;
   }
 
-  .section-transition {
-    @apply transition-all duration-500;
-  }
-
-  /* Animation utilities */
-  .animate-on-scroll {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  }
-
-  .animate-on-scroll.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .stagger-delay-1 {
-    transition-delay: 0.1s;
-  }
-
-  .stagger-delay-2 {
-    transition-delay: 0.2s;
-  }
-
-  .stagger-delay-3 {
-    transition-delay: 0.3s;
-  }
+  /* ... keep existing code (section-transition and animation utilities) */
 }

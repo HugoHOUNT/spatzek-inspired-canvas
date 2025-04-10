@@ -114,7 +114,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-portfolio-dark text-portfolio-light overflow-x-hidden">
+    <div className="min-h-screen bg-portfolio-light dark:bg-portfolio-dark text-portfolio-dark dark:text-portfolio-light overflow-x-hidden transition-colors duration-300">
       <Navbar />
       <CanvasAnimation />
 
@@ -122,9 +122,9 @@ const Index = () => {
       <section id="home" className="min-h-screen flex flex-col justify-center items-center relative px-6 py-24 md:py-0">
         <div className="max-w-4xl mx-auto text-center z-10">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-slide-down">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">Hountondji Hugo</span>
+            <span className="text-gradient">Hountondji Hugo</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-12 text-gray-300 animate-slide-up">
+          <p className="text-xl md:text-2xl mb-12 text-gray-700 dark:text-gray-300 animate-slide-up">
             Expert en Intelligence Artificielle, Big Data et Data Analyse
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-12 animate-fade-in">
@@ -136,32 +136,32 @@ const Index = () => {
             </Button>
             <Button 
               variant="outline" 
-              className="border-indigo-600 text-indigo-400 hover:bg-indigo-600 hover:text-white py-2 px-6 text-lg"
+              className="border-indigo-600 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-600 hover:text-white py-2 px-6 text-lg"
               onClick={() => scrollToSection('#contact')}
             >
               Me contacter
             </Button>
           </div>
           <div className="flex justify-center gap-6 animate-fade-in">
-            <a href="#" className="text-gray-400 hover:text-indigo-400 transition-colors">
+            <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
               <Github className="w-6 h-6" />
             </a>
-            <a href="#" className="text-gray-400 hover:text-indigo-400 transition-colors">
+            <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
               <Linkedin className="w-6 h-6" />
             </a>
-            <a href="#" className="text-gray-400 hover:text-indigo-400 transition-colors">
+            <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
               <Mail className="w-6 h-6" />
             </a>
           </div>
         </div>
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-pulse">
-          <ChevronDown className="text-indigo-400 w-8 h-8" />
+          <ChevronDown className="text-indigo-600 dark:text-indigo-400 w-8 h-8" />
         </div>
       </section>
 
       {/* Footer - keeping minimal footer for copyright */}
-      <footer className="py-6 px-6 text-center border-t border-white/10">
-        <p className="text-gray-400">
+      <footer className="py-6 px-6 text-center border-t border-gray-200 dark:border-white/10">
+        <p className="text-gray-600 dark:text-gray-400">
           © {new Date().getFullYear()} Hountondji Hugo. Tous droits réservés.
         </p>
       </footer>
