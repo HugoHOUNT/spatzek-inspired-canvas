@@ -65,7 +65,7 @@ const Navbar = () => {
     )}>
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="flex items-center gap-2">
-          <span className="text-xl font-bold text-gradient">Hugo Hountondji</span>
+          <span className="text-xl font-bold text-indigo-400">Hugo Hountondji</span>
         </div>
 
         {/* Desktop navigation */}
@@ -79,12 +79,10 @@ const Navbar = () => {
                 scrollToSection(item.href);
               }}
               className={cn(
-                'text-sm font-medium transition-colors relative py-1 px-2',
+                'text-sm font-medium transition-colors py-1 px-2',
                 activeSection === item.href.substring(1)
-                  ? 'text-portfolio-accent'
-                  : 'text-portfolio-light hover:text-portfolio-accent',
-                'after:content-[""] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-portfolio-accent after:origin-bottom-right after:transition-transform after:duration-300',
-                activeSection === item.href.substring(1) && 'after:scale-x-100 after:origin-bottom-left'
+                  ? 'text-indigo-400 border-b-2 border-indigo-400'
+                  : 'text-portfolio-light hover:text-indigo-400'
               )}
             >
               {item.label}
@@ -118,7 +116,7 @@ const Navbar = () => {
             className={cn(
               'w-full text-center py-4 text-lg transition-colors',
               activeSection === item.href.substring(1)
-                ? 'text-portfolio-accent'
+                ? 'text-indigo-400'
                 : 'text-portfolio-light'
             )}
           >
