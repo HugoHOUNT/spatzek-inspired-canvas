@@ -13,6 +13,8 @@ interface NavItem {
 const navItems: NavItem[] = [
   { label: 'Accueil', href: '/' },
   { label: 'Projets', href: '/projects' },
+  { label: 'Expérience', href: '/experience' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 const Navbar = () => {
