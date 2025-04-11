@@ -190,7 +190,9 @@ const Experience = () => {
                             <div>
                               <CardTitle className="text-xl">
                                 {item.title}
-                                {item.subtitle && <span className="text-lg text-gray-600 dark:text-gray-400 block mt-1">{item.subtitle}</span>}
+                                {item.type === 'education' && 'subtitle' in item && (
+                                  <span className="text-lg text-gray-600 dark:text-gray-400 block mt-1">{item.subtitle}</span>
+                                )}
                               </CardTitle>
                             </div>
                             <Badge variant="outline" className="flex items-center gap-1">
