@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from "@/components/ui/table";
@@ -137,7 +136,45 @@ const Experience = () => {
     { category: "Modélisation de process", skills: ["Bonita"] }
   ];
 
-  // Ordre chronologique inverté pour l'affichage
+  // Fonction améliorée pour extraire la date à partir d'une période
+  const extractDate = (period) => {
+    // Mois en français pour la conversion
+    const moisFrancais = {
+      'janvier': 1, 'février': 2, 'mars': 3, 'avril': 4, 'mai': 5, 'juin': 6,
+      'juillet': 7, 'août': 8, 'septembre': 9, 'octobre': 10, 'novembre': 11, 'décembre': 12
+    };
+    
+    // Gestion de "Aujourd'hui" comme date actuelle
+    if (period.toLowerCase().includes('aujourd\'hui')) {
+      return new Date().getTime();
+    }
+    
+    // Extraire l'année et le mois de fin (dernière partie de la période)
+    const parties = period.split('-').length > 1 
+      ? period.split('-')[1].trim() 
+      : period.includes('à') 
+        ? period.split('à')[1].trim() 
+        : period.trim();
+    
+    // Trouver l'année (4 chiffres consécutifs)
+    const matchAnnee = parties.match(/\d{4}/);
+    const annee = matchAnnee ? parseInt(matchAnnee[0]) : new Date().getFullYear();
+    
+    // Trouver le mois s'il existe
+    let mois = 12; // Par défaut décembre si seulement l'année est spécifiée
+    
+    // Chercher tous les mois possibles dans la chaîne
+    Object.keys(moisFrancais).forEach(m => {
+      if (parties.toLowerCase().includes(m.toLowerCase())) {
+        mois = moisFrancais[m];
+      }
+    });
+    
+    // Créer un timestamp pour la comparaison (année * 100 + mois)
+    return annee * 100 + mois;
+  };
+
+  // Ordre chronologique inversé pour l'affichage
   const timelineItems = [
     ...experiences.map(exp => ({
       type: 'experience',
@@ -153,13 +190,8 @@ const Experience = () => {
       details: form.skills,
     }))
   ].sort((a, b) => {
-    // Extraction de l'année de fin à partir de la période
-    const getEndYear = (period) => {
-      const match = period.match(/\d{4}$/);
-      return match ? parseInt(match[0]) : 0;
-    };
-    // Pour le tri décroissant (plus récent d'abord)
-    return getEndYear(b.period) - getEndYear(a.period);
+    // Utilisation de la fonction améliorée
+    return extractDate(b.period) - extractDate(a.period);
   });
 
   return (
