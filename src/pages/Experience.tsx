@@ -43,7 +43,7 @@ const Experience = () => {
         {
           title: "Assistant Outils et Process",
           responsibilities: [
-            "Paramétrage des outils pédagogiques, commerciaux et de data visualisation",
+            "Paramétrage des outils pédagogiques, commerciaux et de datavisualisation",
             "Automatisation de process",
             "Recueil du besoin, la mise en place de solutions et accompagnement des utilisateurs",
             "Conception, création et suivi de rapport Power BI"
@@ -84,16 +84,27 @@ const Experience = () => {
     {
       degree: "MASTER - IA ET BIG DATA",
       school: "ESGI, École d'Informatique",
-      period: "Septembre 2022 à Septembre 2024",
+      period: "Septembre 2024 à Septembre 2026",
       skills: ["Deep Learning, Machine Learning, Modélisation", "Cloud (AWS, Azure) et Big Data", "Spark Core, Spark Streaming", "Gestion de projet"]
     },
     {
-      degree: "BACHELOR - DIGITAL, BUSINESS & DATA (ALTERNANCE)",
-      school: "ECE, École d'Ingénieurs",
-      period: "Septembre 2018 à Juillet 2021",
+      degree: "BACHELOR - IA & BIG DATA (ALTERNANCE)",
+      school: "ESGI, École d'Informatique",
+      period: "Septembre 2023 à Septembre 2024",
       skills: [
-        "Structuration et analyse de données de grandes tailles pour créer de l'information de gestion",
-        "Marketing & Génération des données clients - CRM",
+        "Programmation C, Python, Java Avancé",
+        "Conception de bases de données relationnelles, MySQL",
+        "Introduction - Framework Machine Learning",
+        "Projet final: création d'une IA de reconnaissance d'images"
+      ]
+    },
+    {
+      degree: "BACHELOR - DIGITAL BUSINESS & DATA (ALTERNANCE)",
+      school: "ECE, École d'Ingénieurs",
+      period: "Septembre 2022 à Juillet 2023",
+      skills: [
+        "Structuration et analyse de données de grandes tailles pour créer de nouveaux services ou application.",
+        "Marketing & Gestion des données clients – CRM",
         "Gestion de projets informatiques"
       ]
     },
@@ -110,7 +121,7 @@ const Experience = () => {
       degree: "BACCALAURÉAT GÉNÉRAL SCIENTIFIQUE",
       school: "EFE Montaigne, spécialité SVT",
       period: "2019 - 2020",
-      skills: ["Mention spécialité SVT"]
+      skills: ["Mention Bien"]
     }
   ];
 
