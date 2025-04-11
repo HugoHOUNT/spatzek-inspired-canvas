@@ -83,14 +83,14 @@ const Experience = () => {
   const formations = [
     {
       degree: "MASTER - IA ET BIG DATA",
-      school: "ESTIAM (Alternance)",
-      period: "Septembre 2021 à septembre 2023",
-      skills: ["Deep Learning, Machine Learning, Modélisation", "Cloud (GCP, Azure) et Big Data", "Spark Core, Spark Streaming", "Gestion de projet"]
+      school: "ESGI, École d'Informatique",
+      period: "Septembre 2022 à Septembre 2024",
+      skills: ["Deep Learning, Machine Learning, Modélisation", "Cloud (AWS, Azure) et Big Data", "Spark Core, Spark Streaming", "Gestion de projet"]
     },
     {
       degree: "BACHELOR - DIGITAL, BUSINESS & DATA (ALTERNANCE)",
-      school: "ESTIAM",
-      period: "Septembre 2018 à septembre 2021",
+      school: "ECE, École d'Ingénieurs",
+      period: "Septembre 2018 à Juillet 2021",
       skills: [
         "Structuration et analyse de données de grandes tailles pour créer de l'information de gestion",
         "Marketing & Génération des données clients - CRM",
@@ -99,30 +99,30 @@ const Experience = () => {
     },
     {
       degree: "DUT STATISTIQUES ET INFORMATIQUE DÉCISIONNELLE",
-      school: "IUT de Lisieux",
-      period: "Septembre 2016 à septembre 2018",
+      school: "Université GRAND OUEST NORMANDIE",
+      period: "2020 - 2022",
       skills: [
-        "Statistiques, analyse de données, analyse statistique des données",
+        "Traitement, modélisation et analyse statistique des données",
         "Gestion de base de données"
       ]
     },
     {
       degree: "BACCALAURÉAT GÉNÉRAL SCIENTIFIQUE",
-      school: "Option Euro",
-      period: "2013-2016",
+      school: "EFE Montaigne, spécialité SVT",
+      period: "2019 - 2020",
       skills: ["Mention spécialité SVT"]
     }
   ];
 
   const competences = [
-    { category: "Programmation / Développement", skills: ["Python", "SQL/NoSQL", "Pandas", "Power BI", "Spark/PySpark", "DataBricks"] },
-    { category: "Big Data & Cloud", skills: ["Spark", "Hadoop", "Azure", "GCP"] },
-    { category: "SGBD et BI", skills: ["MySQL", "Power Query", "Power BI"] },
+    { category: "Langages de programmation", skills: ["Python (NumPy, Pandas, Polars, Matplotlib, Scikit-learn, TensorFlow, PyTorch, LightGBM, PySpark)", "Rust", "Java", "C"] },
+    { category: "Big Data & Cloud", skills: ["Spark", "Hadoop", "Azure", "AWS"] },
+    { category: "SGBD et BI", skills: ["MySQL", "Power Query", "Power Pivot"] },
     { category: "Statistiques et Data Science", skills: ["R", "SAS"] },
-    { category: "Data Visualisation et développement Software", skills: [""] },
+    { category: "Data Visualisation", skills: ["Power BI", "Tableau Software"] },
     { category: "CRM", skills: ["Dynamics 365", "Salesforce"] },
-    { category: "Bureautique", skills: ["Power Automate", "Excel Avancé"] },
-    { category: "Gestion de projet", skills: ["Planner", "Tracker", "GitHub", "Jira"] },
+    { category: "Bureautique", skills: ["Power Automate", "SharePoint", "Suite Office 365"] },
+    { category: "Gestion de projet", skills: ["Pivotal Tracker", "GitHub", "GitLab"] },
     { category: "Modélisation de process", skills: ["Bonita"] }
   ];
 
