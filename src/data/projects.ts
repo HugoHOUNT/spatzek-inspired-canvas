@@ -1,36 +1,19 @@
-
 import { Project } from '@/types/project';
 
 export const projectsData: Project[] = [
   {
     id: 1,
     title: "Analyse prédictive des données clients",
-    description: "Développement d'un système de prédiction basé sur des algorithmes d'apprentissage automatique pour anticiper les comportements clients.",
-    category: "Data",
+    category: "Big Data & IA",
+    description: "Développement d'un système de prédiction basé sur des algorithmes d'apprentissage automatique...",
     technologies: ["Python", "TensorFlow", "Hadoop", "Spark"],
-    year: 2023,
-    involvement: "Projet solo",
-    status: "Terminé",
-    image: "/placeholder.svg",
-    links: {
-      demo: "https://example.com/demo",
-      source: "https://github.com/username/project1"
-    }
   },
   {
     id: 2,
     title: "Dashboard de suivi de performance",
-    description: "Création d'un tableau de bord interactif permettant de suivre en temps réel les performances des campagnes marketing.",
-    category: "Data",
-    technologies: ["React", "JavaScript", "Tailwind", "SQL"],
-    year: 2023,
-    involvement: "Travail d'équipe",
-    status: "Terminé",
-    image: "/placeholder.svg",
-    links: {
-      website: "https://example.com",
-      source: "https://github.com/username/project2"
-    }
+    category: "Data Visualisation",
+    description: "Création d'un tableau de bord interactif permettant de suivre en temps réel les performances...",
+    technologies: ["D3.js", "React", "SQL", "Tableau"],
   },
   {
     id: 3,
@@ -41,7 +24,7 @@ export const projectsData: Project[] = [
     year: 2022,
     involvement: "Travail d'équipe",
     status: "Terminé",
-    image: "/placeholder.svg"
+    image: "/placeholder.svg",
   },
   {
     id: 4,
@@ -52,7 +35,7 @@ export const projectsData: Project[] = [
     year: 2022,
     involvement: "Contributeur secondaire",
     status: "Terminé",
-    image: "/placeholder.svg"
+    image: "/placeholder.svg",
   },
   {
     id: 5,
@@ -65,8 +48,8 @@ export const projectsData: Project[] = [
     status: "En cours",
     image: "/placeholder.svg",
     links: {
-      source: "https://github.com/username/portfolio"
-    }
+      source: "https://github.com/username/portfolio",
+    },
   },
   {
     id: 6,
@@ -77,7 +60,7 @@ export const projectsData: Project[] = [
     year: 2021,
     involvement: "Travail d'équipe",
     status: "MVP",
-    image: "/placeholder.svg"
+    image: "/placeholder.svg",
   },
   {
     id: 7,
@@ -88,7 +71,7 @@ export const projectsData: Project[] = [
     year: 2023,
     involvement: "Projet solo",
     status: "Terminé",
-    image: "/placeholder.svg"
+    image: "/placeholder.svg",
   },
   {
     id: 8,
@@ -99,6 +82,6 @@ export const projectsData: Project[] = [
     year: 2024,
     involvement: "Projet solo",
     status: "Prototype",
-    image: "/placeholder.svg"
-  }
+    image: "/placeholder.svg",
+  },
 ];

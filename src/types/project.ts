@@ -1,4 +1,3 @@
-
 export type ProjectCategory = 
   | 'Site web'
   | 'Application mobile'
@@ -38,17 +37,15 @@ export type ProjectStatus =
 export interface Project {
   id: number;
   title: string;
+  category: string;
   description: string;
-  category: ProjectCategory;
-  technologies: ProjectTechnology[];
-  year: number;
-  involvement: ProjectInvolvement;
-  status: ProjectStatus;
-  image: string;
-  isFavorite?: boolean;
+  technologies: string[];
+  year?: number; // Facultatif
+  involvement?: string; // Facultatif
+  status?: string; // Facultatif
+  image?: string; // Facultatif
   links?: {
-    demo?: string;
-    source?: string;
-    website?: string;
+    source?: string; // Facultatif
+    demo?: string; // Facultatif
   };
 }
