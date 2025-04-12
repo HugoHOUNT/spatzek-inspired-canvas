@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom'; // Importer useNavigate
 import { ChevronDown, Github, Linkedin, Mail, Camera, Database, BrainCircuit, BarChart4, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
@@ -76,6 +77,8 @@ const SectionDivider = () => (
 );
 
 const Index = () => {
+  const navigate = useNavigate(); // Initialiser useNavigate
+
   // Refs for sections
   const projectsRef = useRef<HTMLDivElement>(null);
   const experienceRef = useRef<HTMLDivElement>(null);
@@ -103,16 +106,6 @@ const Index = () => {
     };
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.querySelector(sectionId);
-    if (element) {
-      window.scrollTo({
-        top: (element as HTMLElement).offsetTop,
-        behavior: 'smooth'
-      });
-    }
-  };
-
   return (
     <div className="min-h-screen bg-portfolio-light dark:bg-portfolio-dark text-portfolio-dark dark:text-portfolio-light overflow-x-hidden transition-colors duration-300">
       <Navbar />
@@ -128,16 +121,16 @@ const Index = () => {
             Expert en Intelligence Artificielle, Big Data et Data Analyse
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-12 animate-fade-in">
-            <Button 
+            <Button
               className="bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-6 text-lg"
-              onClick={() => scrollToSection('#projects')}
+              onClick={() => navigate('/projects')} // Rediriger vers la page "Projets"
             >
               Découvrir mes projets
             </Button>
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               className="border-indigo-600 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-600 hover:text-white py-2 px-6 text-lg"
-              onClick={() => scrollToSection('#contact')}
+              onClick={() => navigate('/contact')} // Optionnel : rediriger vers "Contact"
             >
               Me contacter
             </Button>
@@ -159,7 +152,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer - keeping minimal footer for copyright */}
+      {/* Footer */}
       <footer className="py-6 px-6 text-center border-t border-gray-200 dark:border-white/10">
         <p className="text-gray-600 dark:text-gray-400">
           © {new Date().getFullYear()} Hountondji Hugo. Tous droits réservés.
