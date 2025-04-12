@@ -15,6 +15,7 @@ const navItems: NavItem[] = [
   { label: 'Projets', href: '/projects' },
   { label: 'Expérience', href: '/experience' },
   { label: 'Contact', href: '/contact' },
+  { label: 'LinkedIn', href: '/linkedin' },
 ];
 
 const Navbar = () => {
