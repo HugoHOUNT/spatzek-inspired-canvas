@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Button } from '@/components/ui/button';
+import AdminNavLink from '@/components/AdminNavLink';
 
 const ProjectDetails = () => {
   const { id } = useParams<{ id: string }>();
@@ -59,6 +60,9 @@ const ProjectDetails = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-portfolio-dark text-black dark:text-white">
       <Navbar />
+      <div className="absolute top-0 right-0 mt-4 mr-4 md:mt-6 md:mr-6">
+        <AdminNavLink />
+      </div>
       <main className="container mx-auto px-4 py-24 md:py-32">
         <div className="mb-8 flex items-center justify-between">
           <Link to="/projects" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400">

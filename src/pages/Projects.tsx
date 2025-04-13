@@ -6,6 +6,7 @@ import { projectsData } from '@/data/projects';
 import ProjectFilters from '@/components/ProjectFilters';
 import ProjectCard from '@/components/ProjectCard';
 import Navbar from '@/components/Navbar';
+import AdminNavLink from '@/components/AdminNavLink';
 
 const Projects = () => {
   const isMobile = useMediaQuery('(max-width: 768px)');
@@ -21,6 +22,9 @@ const Projects = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-portfolio-dark text-black dark:text-white">
       <Navbar />
+      <div className="absolute top-0 right-0 mt-4 mr-4 md:mt-6 md:mr-6">
+        <AdminNavLink />
+      </div>
       
       <main className="container mx-auto px-4 py-24 md:py-32">
         <div className="mb-8">
