@@ -1,6 +1,16 @@
+
 import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
+import { 
+  ChevronDown, 
+  Github, 
+  Linkedin, 
+  Mail, 
+  Brain, // Replace BrainCircuit with Brain
+  BarChart3, // Replace BarChart4 with BarChart3  
+  Sparkles,
+  Database 
+} from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Navbar from '@/components/Navbar';
 import CanvasAnimation from '@/components/CanvasAnimation';
@@ -14,7 +24,7 @@ const projects = [
     category: "Big Data & IA",
     description: "Développement d'un système de prédiction basé sur des algorithmes d'apprentissage automatique pour anticiper les comportements clients et optimiser les campagnes marketing.",
     tags: ["Python", "TensorFlow", "Hadoop", "Spark"],
-    icon: <BrainCircuit className="w-8 h-8 text-indigo-400" />
+    icon: <Brain className="w-8 h-8 text-indigo-400" />
   },
   {
     id: 2,
@@ -22,7 +32,7 @@ const projects = [
     category: "Data Visualisation",
     description: "Création d'un tableau de bord interactif permettant de suivre en temps réel les performances des campagnes marketing et d'en extraire des insights actionnables.",
     tags: ["D3.js", "React", "SQL", "Tableau"],
-    icon: <BarChart4 className="w-8 h-8 text-purple-400" />
+    icon: <BarChart3 className="w-8 h-8 text-purple-400" />
   },
   {
     id: 3,

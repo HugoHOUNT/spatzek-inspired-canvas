@@ -46,8 +46,9 @@ const BackgroundShapes = () => {
         </svg>
       ))}
       
-      {/* Style des animations */}
-      <style jsx>{`
+      {/* Fix: Remove the jsx attribute which is causing the typing error */}
+      <style>
+        {`
         .shape {
           animation: float 20s infinite ease-in-out;
         }
@@ -63,7 +64,8 @@ const BackgroundShapes = () => {
             transform: translateY(20px) translateX(-15px) rotate(-2deg);
           }
         }
-      `}</style>
+        `}
+      </style>
     </div>
   );
 };
