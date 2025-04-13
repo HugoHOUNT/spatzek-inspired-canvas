@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom'; // Importer useNavigate
-import { ChevronDown, Github, Linkedin, Mail, Camera, Database, BrainCircuit, BarChart4, Sparkles } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Separator } from '@/components/ui/separator';
-import CanvasAnimation from '@/components/CanvasAnimation';
 import Navbar from '@/components/Navbar';
+import CanvasAnimation from '@/components/CanvasAnimation';
+import BackgroundShapes from '@/components/BackgroundShapes';
 
 // Data for projects
 const projects = [
@@ -77,7 +77,7 @@ const SectionDivider = () => (
 );
 
 const Index = () => {
-  const navigate = useNavigate(); // Initialiser useNavigate
+  const navigate = useNavigate();
 
   // Refs for sections
   const projectsRef = useRef<HTMLDivElement>(null);
@@ -110,6 +110,7 @@ const Index = () => {
     <div className="min-h-screen bg-portfolio-light dark:bg-portfolio-dark text-portfolio-dark dark:text-portfolio-light overflow-x-hidden transition-colors duration-300">
       <Navbar />
       <CanvasAnimation />
+      <BackgroundShapes />
 
       {/* Hero section */}
       <section id="home" className="min-h-screen flex flex-col justify-center items-center relative px-6 py-24 md:py-0">
@@ -123,14 +124,14 @@ const Index = () => {
           <div className="flex flex-wrap justify-center gap-4 mb-12 animate-fade-in">
             <Button
               className="bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-6 text-lg"
-              onClick={() => navigate('/projects')} // Rediriger vers la page "Projets"
+              onClick={() => navigate('/projects')}
             >
               Découvrir mes projets
             </Button>
             <Button
               variant="outline"
               className="border-indigo-600 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-600 hover:text-white py-2 px-6 text-lg"
-              onClick={() => navigate('/contact')} // Optionnel : rediriger vers "Contact"
+              onClick={() => navigate('/contact')}
             >
               Me contacter
             </Button>
