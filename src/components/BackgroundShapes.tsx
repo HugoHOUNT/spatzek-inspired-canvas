@@ -25,28 +25,27 @@ const BackgroundShapes = () => {
       className="fixed inset-0 w-full h-full -z-10 overflow-hidden pointer-events-none"
     >
       {/* Cercles */}
-      {[...Array(8)].map((_, i) => (
-        <svg key={`circle-${i}`} viewBox="0 0 100 100" className="shape absolute w-10 h-10 opacity-10 dark:opacity-20 fill-indigo-900 dark:fill-indigo-300">
+      {[...Array(20)].map((_, i) => (
+        <svg key={`circle-${i}`} viewBox="0 0 100 100" className="shape absolute w-16 h-16 opacity-20 dark:opacity-30 fill-indigo-900 dark:fill-indigo-300">
           <circle cx="50" cy="50" r="40" />
         </svg>
       ))}
       
       {/* Croix */}
-      {[...Array(8)].map((_, i) => (
-        <svg key={`cross-${i}`} viewBox="0 0 100 100" className="shape absolute w-8 h-8 opacity-10 dark:opacity-20 fill-purple-900 dark:fill-purple-300">
+      {[...Array(15)].map((_, i) => (
+        <svg key={`cross-${i}`} viewBox="0 0 100 100" className="shape absolute w-12 h-12 opacity-20 dark:opacity-30 fill-purple-900 dark:fill-purple-300">
           <rect x="40" y="20" width="20" height="60" rx="2" />
           <rect x="20" y="40" width="60" height="20" rx="2" />
         </svg>
       ))}
       
       {/* Triangles */}
-      {[...Array(8)].map((_, i) => (
-        <svg key={`triangle-${i}`} viewBox="0 0 100 100" className="shape absolute w-12 h-12 opacity-10 dark:opacity-20 fill-pink-900 dark:fill-pink-300">
+      {[...Array(15)].map((_, i) => (
+        <svg key={`triangle-${i}`} viewBox="0 0 100 100" className="shape absolute w-20 h-20 opacity-20 dark:opacity-30 fill-pink-900 dark:fill-pink-300">
           <polygon points="50,20 80,80 20,80" />
         </svg>
       ))}
       
-      {/* Fix: Remove the jsx attribute which is causing the typing error */}
       <style>
         {`
         .shape {
