@@ -50,7 +50,7 @@ const ProjectFilters: React.FC<ProjectFiltersProps> = ({
   filters, 
   onFiltersChange, 
   onReset, 
-  availableYears,
+  availableYears = [],
   isMobile = false
 }) => {
   // Handlers pour chaque type de filtre
@@ -278,7 +278,7 @@ const ProjectFilters: React.FC<ProjectFiltersProps> = ({
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="all">Toutes les années</SelectItem>
-              {availableYears.map((year) => (
+              {availableYears && availableYears.map((year) => (
                 <SelectItem key={year} value={year.toString()}>
                   {year}
                 </SelectItem>

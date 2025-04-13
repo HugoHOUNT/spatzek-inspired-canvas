@@ -1,10 +1,12 @@
+
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, ExternalLink, Github, Calendar, Tag } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import { projectsData } from '@/data/projects';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 
 const ProjectDetails = () => {
   const { id } = useParams<{ id: string }>();
@@ -73,39 +75,52 @@ const ProjectDetails = () => {
             <CardDescription className="text-gray-600 dark:text-gray-400">{project.category}</CardDescription>
           </CardHeader>
           <CardContent>
-            <p className="text-lg mb-4">{project.description}</p>
-            <div className="flex flex-wrap gap-2 mb-4">
-              {project.technologies.map((tech, index) => (
-                <Badge key={index} className="bg-gray-100 dark:bg-gray-700 text-sm">
-                  {tech}
-                </Badge>
-              ))}
-            </div>
-            <div className="flex flex-wrap gap-4 text-sm">
-              {project.year && (
-                <div className="flex items-center gap-1.5 text-gray-600 dark:text-gray-400">
-                  <Calendar size={18} />
-                  <span>{project.year}</span>
+            <Tabs defaultValue="details" className="w-full">
+              <TabsList className="mb-4">
+                <TabsTrigger value="details">Détails</TabsTrigger>
+                <TabsTrigger value="technical">Technique</TabsTrigger>
+              </TabsList>
+              
+              <TabsContent value="details">
+                <p className="text-lg mb-4">{project.description}</p>
+                <div className="flex flex-wrap gap-4 text-sm">
+                  {project.year && (
+                    <div className="flex items-center gap-1.5 text-gray-600 dark:text-gray-400">
+                      <Calendar size={18} />
+                      <span>{project.year}</span>
+                    </div>
+                  )}
+                  {project.category && (
+                    <div className="flex items-center gap-1.5 text-gray-600 dark:text-gray-400">
+                      <Tag size={18} />
+                      <span>{project.category}</span>
+                    </div>
+                  )}
                 </div>
-              )}
-              {project.category && (
-                <div className="flex items-center gap-1.5 text-gray-600 dark:text-gray-400">
-                  <Tag size={18} />
-                  <span>{project.category}</span>
+              </TabsContent>
+              
+              <TabsContent value="technical">
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.technologies.map((tech, index) => (
+                    <Badge key={index} className="bg-gray-100 dark:bg-gray-700 text-sm">
+                      {tech}
+                    </Badge>
+                  ))}
                 </div>
-              )}
-              {project.links?.source && (
-                <a
-                  href={project.links.source}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 text-indigo-600 dark:text-indigo-400 hover:underline"
-                >
-                  <Github size={18} />
-                  <span>Code source</span>
-                </a>
-              )}
-            </div>
+                
+                {project.links?.source && (
+                  <a
+                    href={project.links.source}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 text-indigo-600 dark:text-indigo-400 hover:underline"
+                  >
+                    <Github size={18} />
+                    <span>Code source</span>
+                  </a>
+                )}
+              </TabsContent>
+            </Tabs>
           </CardContent>
         </Card>
       </main>
