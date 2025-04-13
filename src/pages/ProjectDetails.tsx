@@ -1,7 +1,6 @@
-
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, ExternalLink, Github, Calendar, Tag, FileText, Presentation, FileChart } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Github, Calendar, Tag, FileText, Presentation, FileBarChart } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import { projectsData } from '@/data/projects';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
@@ -20,7 +19,7 @@ const ProjectDetails = () => {
     if (project) {
       const timer = setTimeout(() => {
         setIsLoading(false);
-      }, 300); // Simule un chargement
+      }, 300);
       return () => clearTimeout(timer);
     } else {
       setNotFound(true);
@@ -61,7 +60,6 @@ const ProjectDetails = () => {
     <div className="min-h-screen bg-white dark:bg-portfolio-dark text-black dark:text-white">
       <Navbar />
       <main className="container mx-auto px-4 py-24 md:py-32">
-        {/* Navigation */}
         <div className="mb-8 flex items-center justify-between">
           <Link to="/projects" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400">
             <ArrowLeft className="mr-2 h-4 w-4 inline" />
@@ -69,7 +67,6 @@ const ProjectDetails = () => {
           </Link>
         </div>
 
-        {/* En-tête du projet */}
         <div className="mb-8">
           <h1 className="text-3xl md:text-4xl font-bold mb-2">{project.title}</h1>
           <div className="flex flex-wrap gap-2 mb-4">
@@ -90,7 +87,6 @@ const ProjectDetails = () => {
           <p className="text-lg text-gray-600 dark:text-gray-400">{project.description}</p>
         </div>
 
-        {/* Détails du projet */}
         <Tabs defaultValue="details">
           <TabsList className="mb-4">
             <TabsTrigger value="details">Détails</TabsTrigger>
@@ -120,7 +116,7 @@ const ProjectDetails = () => {
                     )}
                     {project.status && (
                       <div className="flex items-center gap-2">
-                        <FileChart size={18} className="text-gray-500" />
+                        <FileBarChart size={18} className="text-gray-500" />
                         <span><strong>Statut:</strong> {project.status}</span>
                       </div>
                     )}
