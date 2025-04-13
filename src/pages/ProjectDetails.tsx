@@ -75,7 +75,7 @@ const ProjectDetails = () => {
             <CardDescription className="text-gray-600 dark:text-gray-400">{project.category}</CardDescription>
           </CardHeader>
           <CardContent>
-            <Tabs defaultValue="details" className="w-full">
+            <Tabs defaultValue="details">
               <TabsList className="mb-4">
                 <TabsTrigger value="details">Détails</TabsTrigger>
                 <TabsTrigger value="technical">Technique</TabsTrigger>

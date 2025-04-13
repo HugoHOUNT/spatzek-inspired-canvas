@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { useProjectFilters } from '@/hooks/useProjectFilters';
 import { projectsData } from '@/data/projects';
@@ -78,7 +78,6 @@ const Projects = () => {
                   <ProjectCard 
                     key={project.id} 
                     project={project} 
-                    onToggleFavorite={toggleFavorite}
                   />
                 ))}
               </div>

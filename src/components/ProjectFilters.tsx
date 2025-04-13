@@ -166,7 +166,7 @@ const ProjectFilters: React.FC<ProjectFiltersProps> = ({
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="all">Toutes les années</SelectItem>
-              {availableYears.map((year) => (
+              {Array.isArray(availableYears) && availableYears.map((year) => (
                 <SelectItem key={year} value={year.toString()}>
                   {year}
                 </SelectItem>
@@ -278,7 +278,7 @@ const ProjectFilters: React.FC<ProjectFiltersProps> = ({
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="all">Toutes les années</SelectItem>
-              {availableYears && availableYears.map((year) => (
+              {Array.isArray(availableYears) && availableYears.map((year) => (
                 <SelectItem key={year} value={year.toString()}>
                   {year}
                 </SelectItem>

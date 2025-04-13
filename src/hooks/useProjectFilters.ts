@@ -1,6 +1,6 @@
 
 import { useState, useMemo } from 'react';
-import { Project } from '@/types/project';
+import { Project, ProjectCategory, ProjectTechnology } from '@/types/project';
 import { Filters } from '@/components/ProjectFilters';
 
 export const useProjectFilters = (projects: Project[]) => {
@@ -19,7 +19,7 @@ export const useProjectFilters = (projects: Project[]) => {
 
   // Liste des années disponibles (pour le filtre d'année)
   const availableYears = useMemo(() => {
-    const years = projects.map(project => project.year);
+    const years = projects.map(project => project.year).filter(Boolean) as number[];
     return [...new Set(years)].sort((a, b) => b - a); // Tri décroissant
   }, [projects]);
 
@@ -38,13 +38,13 @@ export const useProjectFilters = (projects: Project[]) => {
         }
         
         // Filtre par catégorie
-        if (filters.categories.length > 0 && !filters.categories.includes(project.category)) {
+        if (filters.categories.length > 0 && !filters.categories.includes(project.category as ProjectCategory)) {
           return false;
         }
         
         // Filtre par technologie (au moins une des technologies sélectionnées doit être présente)
         if (filters.technologies.length > 0 && !project.technologies.some(tech => 
-          filters.technologies.includes(tech))) {
+          filters.technologies.includes(tech as ProjectTechnology))) {
           return false;
         }
         
