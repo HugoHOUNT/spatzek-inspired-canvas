@@ -22,6 +22,15 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { useToast } from '@/components/ui/use-toast';
+import { 
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
+import { useState } from 'react';
 
 const projectSchema = z.object({
   title: z.string().min(3, { message: "Le titre doit comporter au moins 3 caractères" }),
@@ -32,12 +41,20 @@ const projectSchema = z.object({
   involvement: z.string().optional(),
   status: z.string().optional(),
   image: z.string().optional(),
+  demoLink: z.string().url().optional().or(z.literal('')),
+  sourceLink: z.string().url().optional().or(z.literal('')),
 });
 
 type ProjectFormValues = z.infer<typeof projectSchema>;
 
-const ProjectForm = () => {
+interface ProjectFormProps {
+  onComplete?: () => void;
+}
+
+const ProjectForm = ({ onComplete }: ProjectFormProps) => {
   const { toast } = useToast();
+  const [previewDialogOpen, setPreviewDialogOpen] = useState(false);
+  const [previewData, setPreviewData] = useState<ProjectFormValues | null>(null);
   
   const form = useForm<ProjectFormValues>({
     resolver: zodResolver(projectSchema),
@@ -50,14 +67,26 @@ const ProjectForm = () => {
       involvement: 'Projet solo',
       status: 'En cours',
       image: '/placeholder.svg',
+      demoLink: '',
+      sourceLink: '',
     },
   });
+  
+  const handlePreview = () => {
+    const data = form.getValues();
+    setPreviewData(data);
+    setPreviewDialogOpen(true);
+  };
   
   const onSubmit = (data: ProjectFormValues) => {
     // Formater les technologies en tableau
     const formattedData = {
       ...data,
       technologies: data.technologies.split(',').map(tech => tech.trim()),
+      links: {
+        demo: data.demoLink || undefined,
+        source: data.sourceLink || undefined,
+      }
     };
     
     console.log('Nouveau projet:', formattedData);
@@ -69,6 +98,10 @@ const ProjectForm = () => {
     });
     
     form.reset();
+    
+    if (onComplete) {
+      onComplete();
+    }
   };
   
   return (
@@ -237,9 +270,42 @@ const ProjectForm = () => {
             )}
           />
           
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <FormField
+              control={form.control}
+              name="demoLink"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Lien de démonstration</FormLabel>
+                  <FormControl>
+                    <Input placeholder="https://demo.example.com" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            
+            <FormField
+              control={form.control}
+              name="sourceLink"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Lien du code source</FormLabel>
+                  <FormControl>
+                    <Input placeholder="https://github.com/username/repo" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+          
           <div className="flex justify-end gap-2 pt-4">
+            <Button type="button" variant="outline" onClick={handlePreview}>
+              Prévisualiser
+            </Button>
             <Button type="reset" variant="outline" onClick={() => form.reset()}>
-              Annuler
+              Réinitialiser
             </Button>
             <Button type="submit">
               Ajouter le projet
@@ -247,6 +313,76 @@ const ProjectForm = () => {
           </div>
         </form>
       </Form>
+      
+      <Dialog open={previewDialogOpen} onOpenChange={setPreviewDialogOpen}>
+        <DialogContent className="max-w-2xl">
+          <DialogHeader>
+            <DialogTitle>Prévisualisation du projet</DialogTitle>
+            <DialogDescription>
+              Voici à quoi ressemblera votre projet
+            </DialogDescription>
+          </DialogHeader>
+          
+          {previewData && (
+            <div className="space-y-4 py-4">
+              <div>
+                <h3 className="text-lg font-bold">{previewData.title}</h3>
+                <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                  <span>{previewData.category}</span>
+                  <span>•</span>
+                  <span>{previewData.year}</span>
+                </div>
+              </div>
+              
+              <div>
+                <p className="text-sm">{previewData.description}</p>
+              </div>
+              
+              <div>
+                <h4 className="text-sm font-semibold mb-1">Technologies</h4>
+                <div className="flex flex-wrap gap-1">
+                  {previewData.technologies.split(',').map((tech, i) => (
+                    <span key={i} className="bg-gray-100 dark:bg-gray-800 text-xs px-2 py-1 rounded">
+                      {tech.trim()}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-2 gap-4 text-sm">
+                <div>
+                  <span className="font-semibold">Implication:</span> {previewData.involvement}
+                </div>
+                <div>
+                  <span className="font-semibold">Statut:</span> {previewData.status}
+                </div>
+                {previewData.demoLink && (
+                  <div>
+                    <span className="font-semibold">Démo:</span>{' '}
+                    <a href={previewData.demoLink} className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">
+                      Lien de démonstration
+                    </a>
+                  </div>
+                )}
+                {previewData.sourceLink && (
+                  <div>
+                    <span className="font-semibold">Source:</span>{' '}
+                    <a href={previewData.sourceLink} className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">
+                      Code source
+                    </a>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+          
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setPreviewDialogOpen(false)}>
+              Fermer
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };

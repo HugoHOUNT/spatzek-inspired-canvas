@@ -1,12 +1,14 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Moon, Sun } from 'lucide-react';
+import { Moon, Sun, UserCog } from 'lucide-react';
 import { useTheme } from '@/hooks/useTheme';
 import { Button } from '@/components/ui/button';
+import { useAuth } from '@/hooks/useAuth';
 
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
+  const { isAuthenticated } = useAuth();
 
   return (
     <nav className="bg-white dark:bg-portfolio-dark border-b border-gray-200 dark:border-gray-700 py-4">
@@ -24,6 +26,12 @@ const Navbar = () => {
           <Link to="/contact" className="px-3 py-1.5 text-sm font-medium rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
             Contact
           </Link>
+          {isAuthenticated && (
+            <Link to="/admin/projects" className="px-3 py-1.5 text-sm font-medium rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors flex items-center gap-1">
+              <UserCog size={16} />
+              <span className="hidden md:inline">Admin</span>
+            </Link>
+          )}
           <Button
             variant="ghost"
             size="icon"
