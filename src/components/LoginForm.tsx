@@ -81,12 +81,9 @@ const LoginForm = () => {
           </Button>
         </form>
       </Form>
-      
-      <div className="mt-4 text-sm text-center text-gray-500 dark:text-gray-400">
-        <p>Pour la démonstration: Utilisateur: admin / Mot de passe: admin123</p>
-      </div>
     </div>
   );
 };
 
 export default LoginForm;
+
