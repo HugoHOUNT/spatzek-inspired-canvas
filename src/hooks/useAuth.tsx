@@ -16,10 +16,10 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | null>(null);
 
-// Utilisateur administrateur fictif pour la démonstration
+// Utilisateur administrateur avec les nouveaux identifiants
 const ADMIN_USER = {
-  username: 'admin',
-  password: 'admin123',
+  username: 'hountondjihugo@gmail.com',
+  password: 'Azertyuiop1234567890',
   isAdmin: true
 };
 
