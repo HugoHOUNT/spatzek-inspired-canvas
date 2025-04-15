@@ -13,9 +13,9 @@ export const projectsData: Project[] = [
     status: "Terminé",
     image: "/lovable-uploads/1abc8b8d-d6d6-4109-b050-4085f39e80b2.png",
     details: {
-      context: "Dans le cadre des parcours de certification et de diplomation proposés par IFG Executive Education, la gestion des candidatures constitue un processus complexe et structurant. Elle implique plusieurs étapes clés telles que la vérification de la conformité des dossiers, la validation par des jurys successifs, ainsi que le suivi administratif de chaque candidat. Face à la diversité des programmes, à l'augmentation des flux de candidatures et à la multiplicité des étapes, la gestion manuelle de ces processus devenait de plus en plus difficile. Cette dispersion des données entravait non seulement la lisibilité des parcours, mais ralentissait aussi la prise de décision.",
-      objective: "Afin de répondre à ces enjeux, j'ai conçu et développé un tableau de bord interactif sous Power BI. L'objectif était de centraliser l'ensemble des données relatives aux jurys de certification et de diplomation, de les rendre intelligibles visuellement et de les transformer en un véritable outil d'aide à la décision pour la direction pédagogique et les équipes opérationnelles. Le Power BI permet ainsi de : \n -Suivre l'état d'avancement des candidatures, \n -Identifier les dossiers non conformes, \n -Mesurer les délais de traitement et les performances des jurys \n -Visualiser les abandons, reports, certifications et taux de réussite par programme, /Anticiper les besoins d'accompagnement et planifier efficacement les prochaines sessions.",
-      impact: "Ce tableau de bord est rapidement devenu un levier stratégique pour l'organisation : \n -Il renforce la transparence des processus de certification, \n -Il améliore la réactivité des équipes et l'efficacité opérationnelle, \n -Il permet d'anticiper les risques d'abandon et d'échec, en facilitant l'identification des points de blocage, \n -Il valorise l'expérience des apprenants en assurant un meilleur suivi qualitatif des parcours, \n -Il soutient la réflexion stratégique sur l'évolution des programmes et des flux de candidats. Il contribue directement à la valorisation de l'expérience apprenant et à la réputation de l'établissement sur le marché de la formation professionnelle.",
+      context: "Dans le cadre des parcours de certification et de diplomation proposés par IFG Executive Education, la gestion des candidatures constitue un processus complexe et structurant. Elle implique plusieurs étapes clés telles que la vérification de la conformité des dossiers, la validation par des jurys successifs, ainsi que le suivi administratif de chaque candidat. Face à la diversité des programmes, à l’augmentation des flux de candidatures et à la multiplicité des étapes, la gestion manuelle de ces processus devenait de plus en plus difficile. Cette dispersion des données entravait non seulement la lisibilité des parcours, mais ralentissait aussi la prise de décision.",
+      objective: "Afin de répondre à ces enjeux, j’ai conçu et développé un tableau de bord interactif sous Power BI. L’objectif était de centraliser l’ensemble des données relatives aux jurys de certification et de diplomation, de les rendre intelligibles visuellement et de les transformer en un véritable outil d’aide à la décision pour la direction pédagogique et les équipes opérationnelles. Le Power BI permet ainsi de : \n -Suivre l’état d’avancement des candidatures, \n -Identifier les dossiers non conformes, \n -Mesurer les délais de traitement et les performances des jurys \n -Visualiser les abandons, reports, certifications et taux de réussite par programme, /Anticiper les besoins d’accompagnement et planifier efficacement les prochaines sessions.",
+      impact: "Ce tableau de bord est rapidement devenu un levier stratégique pour l’organisation : \n -Il renforce la transparence des processus de certification, \n -Il améliore la réactivité des équipes et l’efficacité opérationnelle, \n -Il permet d’anticiper les risques d’abandon et d’échec, en facilitant l’identification des points de blocage, \n -Il valorise l’expérience des apprenants en assurant un meilleur suivi qualitatif des parcours, \n -Il soutient la réflexion stratégique sur l’évolution des programmes et des flux de candidats. Il contribue directement à la valorisation de l’expérience apprenant et à la réputation de l’établissement sur le marché de la formation professionnelle.",
       moreImages: [
         "/lovable-uploads/b9406aa6-82d8-46da-b733-ffa2e2320364.png",
         "/lovable-uploads/846f45e2-6833-4302-ac33-eba1d93f8ddf.png",
@@ -37,17 +37,17 @@ export const projectsData: Project[] = [
     year: 2022,
     involvement: "Travail d\'équipe",
     status: "Terminé",
-    image: "/lovable-uploads/0923f3c5-df47-4f36-9213-e78ed126b441.png",
+    image: "/lovable-uploads/2aa7fcd3-f48b-4925-9517-aff9ad505d64.png",
     details: {
       context: "Dans le cadre de ses activités de formation professionnelle, l'établissement reçoit un flux important de candidatures pour ses différents programmes. Chaque parcours implique plusieurs étapes de validation – vérification de la conformité, passage en jury, décision finale. Cette complexité, accentuée par la diversité des profils, nécessitait un outil fiable et flexible pour suivre en temps réel l'avancement des dossiers et optimiser les ressources.",
       objective: "Le but de ce projet était de :\n\n- Centraliser toutes les données du processus d'admission\n- Optimiser les délais de traitement des dossiers\n- Améliorer l'expérience des candidats en assurant un meilleur suivi\n- Offrir aux équipes un outil d'analyse opérationnelle et stratégique pour piloter les performances d'admission",
       impact: "Ce tableau de bord a eu un impact significatif :\n\n- Vision globale et instantanée de l'état d'avancement des candidatures\n- Identification rapide des goulots d'étranglement (ex : délais dans les jurys)\n- Pilotage individualisé par consultant, programme ou période\n- Amélioration de la réactivité et coordination des équipes\n- Contribution directe à l'atteinte des objectifs d'admission et à la satisfaction des apprenants\n- Renforcement de la transparence et appui à la prise de décision managériale",
       moreImages: [
-        "/lovable-uploads/0923f3c5-df47-4f36-9213-e78ed126b441.png",
-        "/lovable-uploads/9f9d48d1-31b0-4ebe-b4f3-35ad922b1a84.png",
-        "/lovable-uploads/0687ec17-394f-4e77-a664-c074a7e373a5.png",
-        "/lovable-uploads/2aa7fcd3-f48b-4925-9517-aff9ad505d64.png",
-        "/lovable-uploads/d3d1c1ff-d8d7-44d3-960f-50b7da5c0343.png"
+        "/lovable-uploads/2aa7fcd3-f48b-4925-9517-aff9ad505d64.png", //1
+        "/lovable-uploads/d3d1c1ff-d8d7-44d3-960f-50b7da5c0343.png" ,//2
+        "/lovable-uploads/0923f3c5-df47-4f36-9213-e78ed126b441.png", //3
+        "/lovable-uploads/9f9d48d1-31b0-4ebe-b4f3-35ad922b1a84.png", //4
+        "/lovable-uploads/0687ec17-394f-4e77-a664-c074a7e373a5.png", //5
       ]
     }
   },
