@@ -1,9 +1,12 @@
+
 export type ProjectCategory = 
   | 'Site web'
   | 'Application mobile'
   | 'Automatisation'
   | 'Design'
   | 'Data'
+  | 'Data Visualisation'
+  | 'Big Data & IA'
   | 'Personnel'
   | 'Professionnel';
 
@@ -21,7 +24,11 @@ export type ProjectTechnology =
   | 'TensorFlow'
   | 'Hadoop'
   | 'Spark'
-  | 'MongoDB';
+  | 'MongoDB'
+  | 'Power BI'
+  | 'DAX'
+  | 'Power Query'
+  | 'SQL Server';
 
 export type ProjectInvolvement = 
   | 'Projet solo'
@@ -40,12 +47,19 @@ export interface Project {
   category: string;
   description: string;
   technologies: string[];
-  year?: number; // Facultatif
-  involvement?: string; // Facultatif
-  status?: string; // Facultatif
-  image?: string; // Facultatif
+  year?: number;
+  involvement?: string;
+  status?: string;
+  image?: string;
   links?: {
-    source?: string; // Facultatif
-    demo?: string; // Facultatif
+    source?: string;
+    demo?: string;
+  };
+  details?: {
+    context?: string;
+    objective?: string;
+    impact?: string;
+    moreImages?: string[];
   };
 }
+

@@ -1,6 +1,7 @@
+
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, ExternalLink, Github, Calendar, Tag, FileText, Presentation, FileBarChart } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Github, Calendar, Tag, FileText, Presentation, FileBarChart, Info, Target, Zap } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import { projectsData } from '@/data/projects';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
@@ -8,6 +9,7 @@ import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Button } from '@/components/ui/button';
 import AdminNavLink from '@/components/AdminNavLink';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const ProjectDetails = () => {
   const { id } = useParams<{ id: string }>();
@@ -91,10 +93,60 @@ const ProjectDetails = () => {
           <p className="text-lg text-gray-600 dark:text-gray-400">{project.description}</p>
         </div>
 
+        {project.image && !project.details?.moreImages?.length && (
+          <div className="mb-8">
+            <img 
+              src={project.image} 
+              alt={`Aperçu de ${project.title}`} 
+              className="w-full max-h-96 object-contain rounded-lg shadow-md"
+            />
+          </div>
+        )}
+
+        {project.details?.moreImages && project.details.moreImages.length > 0 && (
+          <div className="mb-8">
+            <Carousel className="w-full">
+              <CarouselContent>
+                {project.image && (
+                  <CarouselItem>
+                    <div className="p-1">
+                      <div className="flex aspect-video items-center justify-center p-1 relative">
+                        <img 
+                          src={project.image} 
+                          alt={`Image principale de ${project.title}`} 
+                          className="w-full h-full object-contain rounded-md"
+                        />
+                      </div>
+                    </div>
+                  </CarouselItem>
+                )}
+                {project.details.moreImages.map((img, index) => (
+                  <CarouselItem key={index}>
+                    <div className="p-1">
+                      <div className="flex aspect-video items-center justify-center p-1 relative">
+                        <img 
+                          src={img} 
+                          alt={`Image supplémentaire ${index + 1} de ${project.title}`} 
+                          className="w-full h-full object-contain rounded-md"
+                        />
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-2" />
+              <CarouselNext className="right-2" />
+            </Carousel>
+          </div>
+        )}
+
         <Tabs defaultValue="details">
           <TabsList className="mb-4">
             <TabsTrigger value="details">Détails</TabsTrigger>
             <TabsTrigger value="technical">Technique</TabsTrigger>
+            {project.details && (
+              <TabsTrigger value="additional">Informations complémentaires</TabsTrigger>
+            )}
             <TabsTrigger value="documents">Documents</TabsTrigger>
           </TabsList>
           
@@ -128,7 +180,7 @@ const ProjectDetails = () => {
                 </CardContent>
               </Card>
               
-              {project.image && (
+              {!project.details?.moreImages && project.image && (
                 <Card>
                   <CardHeader>
                     <CardTitle className="text-xl">Aperçu</CardTitle>
@@ -186,6 +238,60 @@ const ProjectDetails = () => {
               </CardContent>
             </Card>
           </TabsContent>
+          
+          {project.details && (
+            <TabsContent value="additional">
+              <div className="grid grid-cols-1 gap-6">
+                {project.details.context && (
+                  <Card>
+                    <CardHeader>
+                      <CardTitle className="text-xl flex items-center gap-2">
+                        <Info size={20} />
+                        Contexte
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-600 dark:text-gray-400">
+                        {project.details.context}
+                      </p>
+                    </CardContent>
+                  </Card>
+                )}
+                
+                {project.details.objective && (
+                  <Card>
+                    <CardHeader>
+                      <CardTitle className="text-xl flex items-center gap-2">
+                        <Target size={20} />
+                        Objectif
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-600 dark:text-gray-400">
+                        {project.details.objective}
+                      </p>
+                    </CardContent>
+                  </Card>
+                )}
+                
+                {project.details.impact && (
+                  <Card>
+                    <CardHeader>
+                      <CardTitle className="text-xl flex items-center gap-2">
+                        <Zap size={20} />
+                        Impact
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-600 dark:text-gray-400">
+                        {project.details.impact}
+                      </p>
+                    </CardContent>
+                  </Card>
+                )}
+              </div>
+            </TabsContent>
+          )}
           
           <TabsContent value="documents">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
