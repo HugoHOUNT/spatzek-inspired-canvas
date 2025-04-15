@@ -30,12 +30,52 @@ interface ProjectFiltersProps {
 
 // Options pour les sélecteurs
 const categories: ProjectCategory[] = [
-  'Site web', 'Application mobile', 'Automatisation', 'Design', 'Data', 'Personnel', 'Professionnel'
+  'Site web',
+  'Application mobile',
+  'Automatisation',
+  'Design',
+  'Data',
+  'Data Visualisation',
+  'Modélisation',
+  'Big Data & IA',
+  'Personnel',
+  'Professionnel',
+  'Pilotage des processus',
+  'Business Intelligence',
+  'Machine Learning',
+  'Deep Learning',
 ];
 
 const technologies: ProjectTechnology[] = [
-  'React', 'Node.js', 'Python', 'Figma', 'Photoshop', 'Tailwind', 'SQL', 'JavaScript', 
-  'TypeScript', 'HTML/CSS', 'TensorFlow', 'Hadoop', 'Spark', 'MongoDB'
+  'Python',
+  'SQL',
+  'Java',
+  'Hadoop',
+  'Spark',
+  'MongoDB',
+  'Power BI',
+  'DAX',
+  'Power Query',
+  'SQL Server',
+  'Power BI Desktop',
+  'Power Query (ETL)',
+  'Rust',
+  'C',
+  'R',
+  'SAS',
+  'Tableau Software',
+  'Excel',
+  'Sharepoint',
+  'Power Automate',
+  'Pivotal Tracker',
+  'GitHub',
+  'Bonita',
+  'Azure',
+  'DataBricks',
+  'AWS',
+  'Spark Core',
+  'Spark Streaming',
+  'Docker',
 ];
 
 const involvements: ProjectInvolvement[] = [
