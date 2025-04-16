@@ -26,5 +26,5 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src", "public/images"]
+  "include": ["src", "public/assets/images"]
 }
