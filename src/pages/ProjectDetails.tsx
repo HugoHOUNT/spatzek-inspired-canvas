@@ -14,35 +14,25 @@ import fallbackImage from '@/assets/images/placeholder';
 const ImageWithFallback = ({ src, alt, className }: { src: string; alt: string; className?: string }) => {
   const [error, setError] = useState(false);
 
-  const handleImageError = () => {
-    console.error(`Erreur de chargement de l'image: ${src}`);
-    setError(true);
-  };
-
   useEffect(() => {
-    console.log('Tentative de chargement:', {
+    // Log plus détaillé
+    console.log('Debug image:', {
       src,
-      fullPath: window.location.origin + src
+      publicPath: `/public${src}`, // Test avec /public
+      fullPath: window.location.origin + src,
+      error
     });
-    fetch(src)
-      .then(response => {
-        if (!response.ok) {
-          console.error('Image non trouvée:', src);
-          setError(true);
-        }
-      })
-      .catch(error => {
-        console.error('Erreur de chargement:', error);
-        setError(true);
-      });
-  }, [src]);
+  }, [src, error]);
 
   return (
     <img
       src={error ? fallbackImage : src}
       alt={alt}
       className={className}
-      onError={handleImageError}
+      onError={(e) => {
+        console.error('Erreur de chargement:', e);
+        setError(true);
+      }}
     />
   );
 };
