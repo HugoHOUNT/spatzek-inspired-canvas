@@ -2,51 +2,51 @@ import { Project } from '@/types/project';
 
 // Imports pour le projet Scolarité
 //texte pour pouvoir push
-import scol1 from '@/assets/images/Scolarite/Scol1.png';
-import scol2 from '@/assets/images/Scolarite/Scol2.png';
-import scol3 from '@/assets/images/Scolarite/Scol3.png';
-import scol4 from '@/assets/images/Scolarite/Scol4.png';
-import scol5 from '@/assets/images/Scolarite/Scol5.png';
-import scol6 from '@/assets/images/Scolarite/Scol6.png';
-import scol7 from '@/assets/images/Scolarite/Scol7.png';
-import scol8 from '@/assets/images/Scolarite/Scol8.png';
-import scol9 from '@/assets/images/Scolarite/Scol9.png';
+import scol1 from '@/assets/images/Scolarite/Scol1.PNG';
+import scol2 from '@/assets/images/Scolarite/Scol2.PNG';
+import scol3 from '@/assets/images/Scolarite/Scol3.PNG';
+import scol4 from '@/assets/images/Scolarite/Scol4.PNG';
+import scol5 from '@/assets/images/Scolarite/Scol5.PNG';
+import scol6 from '@/assets/images/Scolarite/Scol6.PNG';
+import scol7 from '@/assets/images/Scolarite/Scol7.PNG';
+import scol8 from '@/assets/images/Scolarite/Scol8.PNG';
+import scol9 from '@/assets/images/Scolarite/Scol9.PNG';
 
 // Imports pour le projet Admissions
-import adm1 from '@/assets/images/Admissions/Admissions1.png';
-import adm2 from '@/assets/images/Admissions/Admissions2.png';
-import adm3 from '@/assets/images/Admissions/Admissions3.png';
-import adm4 from '@/assets/images/Admissions/Admissions4.png';
-import adm5 from '@/assets/images/Admissions/Admissions5.png';
+import adm1 from '@/assets/images/Admissions/Admissions1.PNG';
+import adm2 from '@/assets/images/Admissions/Admissions2.PNG';
+import adm3 from '@/assets/images/Admissions/Admissions3.PNG';
+import adm4 from '@/assets/images/Admissions/Admissions4.PNG';
+import adm5 from '@/assets/images/Admissions/Admissions5.PNG';
 
 // Imports pour les autres projets...
-import effectif1 from '@/assets/images/EffectifApprenants/EffectifApprenant1.png';
-import effectif2 from '@/assets/images/EffectifApprenants/EffectifApprenant2.png';
-import effectif3 from '@/assets/images/EffectifApprenants/EffectifApprenant3.png';
-import effectif4 from '@/assets/images/EffectifApprenants/EffectifApprenant4.png';
-import effectif5 from '@/assets/images/EffectifApprenants/EffectifApprenant5.png';
-import effectif6 from '@/assets/images/EffectifApprenants/EffectifApprenant6.png';
-import effectif7 from '@/assets/images/EffectifApprenants/EffectifApprenant7.png';
+import effectif1 from '@/assets/images/EffectifApprenants/EffectifApprenant1.PNG';
+import effectif2 from '@/assets/images/EffectifApprenants/EffectifApprenant2.PNG';
+import effectif3 from '@/assets/images/EffectifApprenants/EffectifApprenant3.PNG';
+import effectif4 from '@/assets/images/EffectifApprenants/EffectifApprenant4.PNG';
+import effectif5 from '@/assets/images/EffectifApprenants/EffectifApprenant5.PNG';
+import effectif6 from '@/assets/images/EffectifApprenants/EffectifApprenant6.PNG';
+import effectif7 from '@/assets/images/EffectifApprenants/EffectifApprenant7.PNG';
 
 // Marge
-import marge1 from '@/assets/images/Marge/Marge1.png';
-import marge2 from '@/assets/images/Marge/Marge2.png';
-import marge3 from '@/assets/images/Marge/Marge3.png';
-import marge4 from '@/assets/images/Marge/Marge4.png';
+import marge1 from '@/assets/images/Marge/Marge1.PNG';
+import marge2 from '@/assets/images/Marge/Marge2.PNG';
+import marge3 from '@/assets/images/Marge/Marge3.PNG';
+import marge4 from '@/assets/images/Marge/Marge4.PNG';
 
 // Satisfaction Client
-import satisfaction1 from '@/assets/images/SatisfactionClient/Satisfaction1.png';
-import satisfaction2 from '@/assets/images/SatisfactionClient/Satisfaction2.png';
-import satisfaction3 from '@/assets/images/SatisfactionClient/Satisfaction3.png';
-import satisfaction4 from '@/assets/images/SatisfactionClient/Satisfaction4.png';
-import satisfaction5 from '@/assets/images/SatisfactionClient/Satisfaction5.png';
-import satisfaction6 from '@/assets/images/SatisfactionClient/Satisfaction6.png';
+import satisfaction1 from '@/assets/images/SatisfactionClient/Satisfaction1.PNG';
+import satisfaction2 from '@/assets/images/SatisfactionClient/Satisfaction2.PNG';
+import satisfaction3 from '@/assets/images/SatisfactionClient/Satisfaction3.PNG';
+import satisfaction4 from '@/assets/images/SatisfactionClient/Satisfaction4.PNG';
+import satisfaction5 from '@/assets/images/SatisfactionClient/Satisfaction5.PNG';
+import satisfaction6 from '@/assets/images/SatisfactionClient/Satisfaction6.PNG';
 
 // Fréquentation Hotelière
-import hotel1 from '@/assets/images/FrequentationHoteliere/FrequentationHoteliere1.png';
-import hotel2 from '@/assets/images/FrequentationHoteliere/FrequentationHoteliere2.png';
-import hotel3 from '@/assets/images/FrequentationHoteliere/FrequentationHoteliere3.png';
-import hotel4 from '@/assets/images/FrequentationHoteliere/FrequentationHoteliere4.png';
+import hotel1 from '@/assets/images/FrequentationHoteliere/FrequentationHoteliere1.PNG';
+import hotel2 from '@/assets/images/FrequentationHoteliere/FrequentationHoteliere2.PNG';
+import hotel3 from '@/assets/images/FrequentationHoteliere/FrequentationHoteliere3.PNG';
+import hotel4 from '@/assets/images/FrequentationHoteliere/FrequentationHoteliere4.PNG';
 
 
 export const projectsData: Project[] = [
