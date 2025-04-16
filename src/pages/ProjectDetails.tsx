@@ -22,6 +22,7 @@ const ImageWithFallback = ({ src, alt, className }: { src: string; alt: string; 
       onError={() => setError(true)}
     />
   );
+  
 };
 
 const ProjectDetails = () => {
