@@ -20,7 +20,18 @@ const ImageWithFallback = ({ src, alt, className }: { src: string; alt: string; 
   };
 
   useEffect(() => {
-    console.log('Tentative de chargement de l\'image:', src);
+    console.log('Chemin de l\'image:', src);
+    fetch(src)
+      .then(response => {
+        if (!response.ok) {
+          console.error('Image non trouvée:', src);
+          setError(true);
+        }
+      })
+      .catch(error => {
+        console.error('Erreur de chargement:', error);
+        setError(true);
+      });
   }, [src]);
 
   return (
