@@ -9,20 +9,24 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Button } from '@/components/ui/button';
 import AdminNavLink from '@/components/AdminNavLink';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import fallbackImage from '@/assets/images/placeholder.png'; // Ajoutez une image par défaut
+import fallbackImage from '@/assets/images/placeholder';
 
 const ImageWithFallback = ({ src, alt, className }: { src: string; alt: string; className?: string }) => {
   const [error, setError] = useState(false);
+
+  const handleImageError = () => {
+    console.error(`Erreur de chargement de l'image: ${src}`);
+    setError(true);
+  };
 
   return (
     <img
       src={error ? fallbackImage : src}
       alt={alt}
       className={className}
-      onError={() => setError(true)}
+      onError={handleImageError}
     />
   );
-  
 };
 
 const ProjectDetails = () => {
