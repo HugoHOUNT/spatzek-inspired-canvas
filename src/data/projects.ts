@@ -18,6 +18,9 @@ import adm3 from '@/assets/images/Admissions/Admissions3.png';
 import adm4 from '@/assets/images/Admissions/Admissions4.png';
 import adm5 from '@/assets/images/Admissions/Admissions5.png';
 
+// Imports pour les autres projets...
+import effectif1 from '@/assets/images/EffectifApprenants/EffectifApprenant1.png';
+
 export const projectsData: Project[] = [
   {
     id: 1,
@@ -28,7 +31,7 @@ export const projectsData: Project[] = [
     year: 2023,
     involvement: "Projet solo",
     status: "Terminé",
-    image: "/assets/images/Scolarite/Scol1.png",
+    image: scol1,
     details: {
       context: "Dans le cadre des parcours de certification et de diplomation proposés par IFG Executive Education, la gestion des candidatures constitue un processus complexe et structurant. Elle implique plusieurs étapes clés telles que la vérification de la conformité des dossiers, la validation par des jurys successifs, ainsi que le suivi administratif de chaque candidat. Face à la diversité des programmes, à l'augmentation des flux de candidatures et à la multiplicité des étapes, la gestion manuelle de ces processus devenait de plus en plus difficile. Cette dispersion des données entravait non seulement la lisibilité des parcours, mais ralentissait aussi la prise de décision.",
       objective: "Afin de répondre à ces enjeux, j'ai conçu et développé un tableau de bord interactif sous Power BI. L'objectif était de centraliser l'ensemble des données relatives aux jurys de certification et de diplomation, de les rendre intelligibles visuellement et de les transformer en un véritable outil d'aide à la décision pour la direction pédagogique et les équipes opérationnelles. Le Power BI permet ainsi de : \n -Suivre l'état d'avancement des candidatures, \n -Identifier les dossiers non conformes, \n -Mesurer les délais de traitement et les performances des jurys \n -Visualiser les abandons, reports, certifications et taux de réussite par programme, /Anticiper les besoins d'accompagnement et planifier efficacement les prochaines sessions.",
@@ -115,20 +118,12 @@ export const projectsData: Project[] = [
     year: 2024,
     involvement: "Travail d'équipe",
     status: "Terminé",
-    image: "/assets/images/EffectifApprenants/EffectifApprenant1.png",
+    image: effectif1,
     details: {
       context: "Le suivi des effectifs est un enjeu central pour garantir un bon dimensionnement des ressources pédagogiques. Jusqu'alors dispersées dans plusieurs fichiers, les données nécessitaient d'être consolidées dans un outil unique.",
       objective: "Permettre :\n- Une analyse dynamique des volumes d'apprenants\n- Une projection à moyen terme des flux d'inscription\n- Une vision par programme, statut, promo et mois",
       impact: "- Amélioration de la prévision RH et logistique\n- Visualisation claire des tendances d'inscriptions\n- Aide à la planification stratégique des formations",
-      moreImages: [
-        "/assets/images/EffectifApprenants/EffectifApprenant1.png",
-        "/assets/images/EffectifApprenants/EffectifApprenant2.png",
-        "/assets/images/EffectifApprenants/EffectifApprenant3.png",
-        "/assets/images/EffectifApprenants/EffectifApprenant4.png",
-        "/assets/images/EffectifApprenants/EffectifApprenant5.png",
-        "/assets/images/EffectifApprenants/EffectifApprenant6.png",
-        "/assets/images/EffectifApprenants/EffectifApprenant7.png"
-      ]
+      moreImages: [effectif1, "/assets/images/EffectifApprenants/EffectifApprenant2.png", "/assets/images/EffectifApprenants/EffectifApprenant3.png", "/assets/images/EffectifApprenants/EffectifApprenant4.png", "/assets/images/EffectifApprenants/EffectifApprenant5.png", "/assets/images/EffectifApprenants/EffectifApprenant6.png", "/assets/images/EffectifApprenants/EffectifApprenant7.png"]
     }
   },
   {
