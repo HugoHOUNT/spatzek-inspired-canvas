@@ -20,7 +20,10 @@ const ImageWithFallback = ({ src, alt, className }: { src: string; alt: string; 
   };
 
   useEffect(() => {
-    console.log('Chemin de l\'image:', src);
+    console.log('Tentative de chargement:', {
+      src,
+      fullPath: window.location.origin + src
+    });
     fetch(src)
       .then(response => {
         if (!response.ok) {
