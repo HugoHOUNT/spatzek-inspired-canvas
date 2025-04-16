@@ -20,6 +20,32 @@ import adm5 from '@/assets/images/Admissions/Admissions5.png';
 
 // Imports pour les autres projets...
 import effectif1 from '@/assets/images/EffectifApprenants/EffectifApprenant1.png';
+import effectif2 from '@/assets/images/EffectifApprenants/EffectifApprenant2.png';
+import effectif3 from '@/assets/images/EffectifApprenants/EffectifApprenant3.png';
+import effectif4 from '@/assets/images/EffectifApprenants/EffectifApprenant4.png';
+import effectif5 from '@/assets/images/EffectifApprenants/EffectifApprenant5.png';
+import effectif6 from '@/assets/images/EffectifApprenants/EffectifApprenant6.png';
+import effectif7 from '@/assets/images/EffectifApprenants/EffectifApprenant7.png';
+
+// Marge
+import marge1 from '@/assets/images/Marge/Marge1.png';
+import marge2 from '@/assets/images/Marge/Marge2.png';
+import marge3 from '@/assets/images/Marge/Marge3.png';
+import marge4 from '@/assets/images/Marge/Marge4.png';
+
+// Satisfaction Client
+import satisfaction1 from '@/assets/images/SatisfactionClient/Satisfaction1.png';
+import satisfaction2 from '@/assets/images/SatisfactionClient/Satisfaction2.png';
+import satisfaction3 from '@/assets/images/SatisfactionClient/Satisfaction3.png';
+import satisfaction4 from '@/assets/images/SatisfactionClient/Satisfaction4.png';
+import satisfaction5 from '@/assets/images/SatisfactionClient/Satisfaction5.png';
+import satisfaction6 from '@/assets/images/SatisfactionClient/Satisfaction6.png';
+
+// Fréquentation Hotelière
+import hotel1 from '@/assets/images/FrequentationHoteliere/FrequentationHoteliere1.png';
+import hotel2 from '@/assets/images/FrequentationHoteliere/FrequentationHoteliere2.png';
+import hotel3 from '@/assets/images/FrequentationHoteliere/FrequentationHoteliere3.png';
+import hotel4 from '@/assets/images/FrequentationHoteliere/FrequentationHoteliere4.png';
 
 export const projectsData: Project[] = [
   {
@@ -123,7 +149,7 @@ export const projectsData: Project[] = [
       context: "Le suivi des effectifs est un enjeu central pour garantir un bon dimensionnement des ressources pédagogiques. Jusqu'alors dispersées dans plusieurs fichiers, les données nécessitaient d'être consolidées dans un outil unique.",
       objective: "Permettre :\n- Une analyse dynamique des volumes d'apprenants\n- Une projection à moyen terme des flux d'inscription\n- Une vision par programme, statut, promo et mois",
       impact: "- Amélioration de la prévision RH et logistique\n- Visualisation claire des tendances d'inscriptions\n- Aide à la planification stratégique des formations",
-      moreImages: [effectif1, "/assets/images/EffectifApprenants/EffectifApprenant2.png", "/assets/images/EffectifApprenants/EffectifApprenant3.png", "/assets/images/EffectifApprenants/EffectifApprenant4.png", "/assets/images/EffectifApprenants/EffectifApprenant5.png", "/assets/images/EffectifApprenants/EffectifApprenant6.png", "/assets/images/EffectifApprenants/EffectifApprenant7.png"]
+      moreImages: [effectif1, effectif2, effectif3, effectif4, effectif5, effectif6, effectif7]
     }
   },
   {
@@ -135,17 +161,12 @@ export const projectsData: Project[] = [
     year: 2024,
     involvement: "Travail d'équipe",
     status: "Terminé",
-    image: "/assets/images/Marge/Marge1.png",
+    image: marge1,
     details: {
       context: "Le suivi économique des formations était jusque-là morcelé entre plusieurs outils. Il devenait indispensable de disposer d'un tableau de bord consolidé pour analyser les marges générées par programme et session.",
       objective: "Mesurer précisément :\n- La marge brute par session\n- Les postes de dépense les plus lourds\n- Le ratio inscription/coût\n- L'évolution des marges par année et programme",
       impact: "- Vision stratégique de la rentabilité\n- Optimisation des coûts\n- Pilotage précis des ressources engagées\n- Appui aux décisions d'investissement ou de repositionnement",
-      moreImages: [
-        "/assets/images/Marge/Marge1.png",
-        "/assets/images/Marge/Marge2.png",
-        "/assets/images/Marge/Marge3.png",
-        "/assets/images/Marge/Marge4.png",
-      ]
+      moreImages: [marge1, marge2, marge3, marge4]
     }
   },
   {
@@ -157,19 +178,12 @@ export const projectsData: Project[] = [
     year: 2024,
     involvement: "Travail d'équipe",
     status: "Terminé",
-    image: "/assets/images/SatisfactionClient/Satisfaction1.png",
+    image: satisfaction1,
     details: {
       context: "L'entreprise souhaitait unifier les données issues des enquêtes de satisfaction post-formation afin de suivre les retours des apprenants et identifier les points forts et axes d'amélioration.",
       objective: "Créer un tableau de bord permettant de :\n- Suivre la satisfaction client sur plusieurs axes\n- Mesurer l'évolution des indicateurs dans le temps\n- Identifier les modules les mieux perçus ou critiques",
       impact: "- Approche proactive d'amélioration continue\n- Vision claire des ressentis apprenants\n- Réactivité accrue des équipes pédagogiques\n- Valorisation des retours lors d'audits ou de présentations internes",
-      moreImages: [
-        "/assets/images/SatisfactionClient/Satisfaction1.png",
-        "/assets/images/SatisfactionClient/Satisfaction2.png",
-        "/assets/images/SatisfactionClient/Satisfaction3.png",
-        "/assets/images/SatisfactionClient/Satisfaction4.png",
-        "/assets/images/SatisfactionClient/Satisfaction5.png",
-        "/assets/images/SatisfactionClient/Satisfaction6.png"
-      ]
+      moreImages: [satisfaction1, satisfaction2, satisfaction3, satisfaction4, satisfaction5, satisfaction6]
     }
   },
   {
@@ -181,17 +195,12 @@ export const projectsData: Project[] = [
     year: 2025,
     involvement: "Travail d'équipe",
     status: "Terminé",
-    image: "/assets/images/FrequentationHoteliere/FrequentationHoteliere1.png",
+    image: hotel1,
     details: {
       context: "Dans un contexte de relance touristique post-COVID, il était essentiel de mieux comprendre les flux de voyageurs, leurs profils, motivations et zones d'accueil afin d'adapter les politiques territoriales.",
       objective: "Permettre aux acteurs publics et privés de :\n- Suivre la fréquentation par période, zone et typologie\n- Identifier les clientèles à forte valeur\n- Anticiper les besoins en hébergement et services",
       impact: "- Vision stratégique du tourisme en Polynésie\n- Soutien aux décisions d'investissement\n- Analyse des tendances émergentes (écotourisme, croisières de luxe…)\n- Renforcement de l'attractivité du territoire",
-      moreImages: [
-        "/assets/images/FrequentationHoteliere/FrequentationHoteliere1.png",
-        "/assets/images/FrequentationHoteliere/FrequentationHoteliere2.png",
-        "/assets/images/FrequentationHoteliere/FrequentationHoteliere3.png",
-        "/assets/images/FrequentationHoteliere/FrequentationHoteliere4.png"
-      ]
+      moreImages: [hotel1, hotel2, hotel3, hotel4]
     }
   },
 ];
