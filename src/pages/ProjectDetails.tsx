@@ -13,20 +13,21 @@ import fallbackImage from '@/assets/images/placeholder';
 
 const ImageWithFallback = ({ src, alt, className }: { src: string; alt: string; className?: string }) => {
   const [error, setError] = useState(false);
+  const [imageSrc, setImageSrc] = useState<string>('');
 
   useEffect(() => {
-    // Log plus détaillé
-    console.log('Debug image:', {
-      src,
-      publicPath: `/public${src}`, // Test avec /public
-      fullPath: window.location.origin + src,
-      error
+    // Importer dynamiquement l'image
+    import(`${src}`).then(image => {
+      setImageSrc(image.default);
+    }).catch(err => {
+      console.error('Erreur de chargement:', err);
+      setError(true);
     });
-  }, [src, error]);
+  }, [src]);
 
   return (
     <img
-      src={error ? fallbackImage : src}
+      src={error ? fallbackImage : imageSrc}
       alt={alt}
       className={className}
       onError={(e) => {
