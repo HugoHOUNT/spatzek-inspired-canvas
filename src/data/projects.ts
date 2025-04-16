@@ -1,5 +1,23 @@
 import { Project } from '@/types/project';
 
+// Imports pour le projet Scolarité
+import scol1 from '@/assets/images/Scolarite/Scol1.png';
+import scol2 from '@/assets/images/Scolarite/Scol2.png';
+import scol3 from '@/assets/images/Scolarite/Scol3.png';
+import scol4 from '@/assets/images/Scolarite/Scol4.png';
+import scol5 from '@/assets/images/Scolarite/Scol5.png';
+import scol6 from '@/assets/images/Scolarite/Scol6.png';
+import scol7 from '@/assets/images/Scolarite/Scol7.png';
+import scol8 from '@/assets/images/Scolarite/Scol8.png';
+import scol9 from '@/assets/images/Scolarite/Scol9.png';
+
+// Imports pour le projet Admissions
+import adm1 from '@/assets/images/Admissions/Admissions1.png';
+import adm2 from '@/assets/images/Admissions/Admissions2.png';
+import adm3 from '@/assets/images/Admissions/Admissions3.png';
+import adm4 from '@/assets/images/Admissions/Admissions4.png';
+import adm5 from '@/assets/images/Admissions/Admissions5.png';
+
 export const projectsData: Project[] = [
   {
     id: 1,
@@ -15,17 +33,7 @@ export const projectsData: Project[] = [
       context: "Dans le cadre des parcours de certification et de diplomation proposés par IFG Executive Education, la gestion des candidatures constitue un processus complexe et structurant. Elle implique plusieurs étapes clés telles que la vérification de la conformité des dossiers, la validation par des jurys successifs, ainsi que le suivi administratif de chaque candidat. Face à la diversité des programmes, à l'augmentation des flux de candidatures et à la multiplicité des étapes, la gestion manuelle de ces processus devenait de plus en plus difficile. Cette dispersion des données entravait non seulement la lisibilité des parcours, mais ralentissait aussi la prise de décision.",
       objective: "Afin de répondre à ces enjeux, j'ai conçu et développé un tableau de bord interactif sous Power BI. L'objectif était de centraliser l'ensemble des données relatives aux jurys de certification et de diplomation, de les rendre intelligibles visuellement et de les transformer en un véritable outil d'aide à la décision pour la direction pédagogique et les équipes opérationnelles. Le Power BI permet ainsi de : \n -Suivre l'état d'avancement des candidatures, \n -Identifier les dossiers non conformes, \n -Mesurer les délais de traitement et les performances des jurys \n -Visualiser les abandons, reports, certifications et taux de réussite par programme, /Anticiper les besoins d'accompagnement et planifier efficacement les prochaines sessions.",
       impact: "Ce tableau de bord est rapidement devenu un levier stratégique pour l'organisation : \n -Il renforce la transparence des processus de certification, \n -Il améliore la réactivité des équipes et l'efficacité opérationnelle, \n -Il permet d'anticiper les risques d'abandon et d'échec, en facilitant l'identification des points de blocage, \n -Il valorise l'expérience des apprenants en assurant un meilleur suivi qualitatif des parcours, \n -Il soutient la réflexion stratégique sur l'évolution des programmes et des flux de candidats. Il contribue directement à la valorisation de l'expérience apprenant et à la réputation de l'établissement sur le marché de la formation professionnelle.",
-      moreImages: [
-        "/assets/images/Scolarite/Scol1.png",
-        "/assets/images/Scolarite/Scol2.png",
-        "/assets/images/Scolarite/Scol3.png",
-        "/assets/images/Scolarite/Scol4.png",
-        "/assets/images/Scolarite/Scol5.png",
-        "/assets/images/Scolarite/Scol6.png",
-        "/assets/images/Scolarite/Scol7.png",
-        "/assets/images/Scolarite/Scol8.png",
-        "/assets/images/Scolarite/Scol9.png"
-      ]
+      moreImages: [scol1, scol2, scol3, scol4, scol5, scol6, scol7, scol8, scol9]
     }
   },
   {
@@ -37,18 +45,12 @@ export const projectsData: Project[] = [
     year: 2024,
     involvement: "Travail d'équipe",
     status: "Terminé",
-    image: "/assets/images/Admissions/Admissions1.png",
+    image: adm1,
     details: {
       context: "Dans le cadre de ses activités de formation professionnelle, l'établissement reçoit un flux important de candidatures pour ses différents programmes. Chaque parcours implique plusieurs étapes de validation – vérification de la conformité, passage en jury, décision finale. Cette complexité, accentuée par la diversité des profils, nécessitait un outil fiable et flexible pour suivre en temps réel l'avancement des dossiers et optimiser les ressources.",
       objective: "Le but de ce projet était de :\n\n- Centraliser toutes les données du processus d'admission\n- Optimiser les délais de traitement des dossiers\n- Améliorer l'expérience des candidats en assurant un meilleur suivi\n- Offrir aux équipes un outil d'analyse opérationnelle et stratégique pour piloter les performances d'admission",
       impact: "Ce tableau de bord a eu un impact significatif :\n\n- Vision globale et instantanée de l'état d'avancement des candidatures\n- Identification rapide des goulots d'étranglement (ex : délais dans les jurys)\n- Pilotage individualisé par consultant, programme ou période\n- Amélioration de la réactivité et coordination des équipes\n- Contribution directe à l'atteinte des objectifs d'admission et à la satisfaction des apprenants\n- Renforcement de la transparence et appui à la prise de décision managériale",
-      moreImages: [
-        "/assets/images/Admissions/Admissions1.png",
-        "/assets/images/Admissions/Admissions2.png",
-        "/assets/images/Admissions/Admissions3.png",
-        "/assets/images/Admissions/Admissions4.png",
-        "/assets/images/Admissions/Admissions5.png",
-      ]
+      moreImages: [adm1, adm2, adm3, adm4, adm5]
     }
   },
   {
