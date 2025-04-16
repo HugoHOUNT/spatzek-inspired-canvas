@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { 
@@ -14,7 +13,6 @@ import {
 import { Button } from '@/components/ui/button';
 import Navbar from '@/components/Navbar';
 import CanvasAnimation from '@/components/CanvasAnimation';
-import BackgroundShapes from '@/components/BackgroundShapes';
 
 // Data for projects
 const projects = [
@@ -120,7 +118,6 @@ const Index = () => {
     <div className="min-h-screen bg-portfolio-light dark:bg-portfolio-dark text-portfolio-dark dark:text-portfolio-light overflow-x-hidden transition-colors duration-300">
       <Navbar />
       <CanvasAnimation />
-      <BackgroundShapes />
 
       {/* Hero section */}
       <section id="home" className="min-h-screen flex flex-col justify-center items-center relative px-6 py-24 md:py-0">
