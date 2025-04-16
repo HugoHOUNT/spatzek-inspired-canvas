@@ -43,10 +43,10 @@ import satisfaction5 from '@/assets/images/SatisfactionClient/Satisfaction5.PNG'
 import satisfaction6 from '@/assets/images/SatisfactionClient/Satisfaction6.PNG';
 
 // Fréquentation Hotelière
-import hotel1 from '@/assets/images/FrequentationHoteliere/FrequentationHoteliere1.PNG';
-import hotel2 from '@/assets/images/FrequentationHoteliere/FrequentationHoteliere2.PNG';
-import hotel3 from '@/assets/images/FrequentationHoteliere/FrequentationHoteliere3.PNG';
-import hotel4 from '@/assets/images/FrequentationHoteliere/FrequentationHoteliere4.PNG';
+import hotel1 from '@/assets/images/FrequentationHoteliere/FrequentationHoteliere1.png';
+import hotel2 from '@/assets/images/FrequentationHoteliere/FrequentationHoteliere2.png';
+import hotel3 from '@/assets/images/FrequentationHoteliere/FrequentationHoteliere3.png';
+import hotel4 from '@/assets/images/FrequentationHoteliere/FrequentationHoteliere4.png';
 
 
 export const projectsData: Project[] = [
