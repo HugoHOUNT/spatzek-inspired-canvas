@@ -1,6 +1,7 @@
 import { Project } from '@/types/project';
 
 // Imports pour le projet Scolarité
+//texte pour pouvoir push
 import scol1 from '@/assets/images/Scolarite/Scol1.png';
 import scol2 from '@/assets/images/Scolarite/Scol2.png';
 import scol3 from '@/assets/images/Scolarite/Scol3.png';
