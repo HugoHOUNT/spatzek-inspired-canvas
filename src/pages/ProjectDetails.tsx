@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, ExternalLink, Github, Calendar, Tag, FileText, Presentation, FileBarChart, Info, Target, Zap } from 'lucide-react';
@@ -10,6 +9,20 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Button } from '@/components/ui/button';
 import AdminNavLink from '@/components/AdminNavLink';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import fallbackImage from '@/assets/images/placeholder.png'; // Ajoutez une image par défaut
+
+const ImageWithFallback = ({ src, alt, className }: { src: string; alt: string; className?: string }) => {
+  const [error, setError] = useState(false);
+
+  return (
+    <img
+      src={error ? fallbackImage : src}
+      alt={alt}
+      className={className}
+      onError={() => setError(true)}
+    />
+  );
+};
 
 const ProjectDetails = () => {
   const { id } = useParams<{ id: string }>();
@@ -95,7 +108,7 @@ const ProjectDetails = () => {
 
         {project.image && !project.details?.moreImages?.length && (
           <div className="mb-8">
-            <img 
+            <ImageWithFallback 
               src={project.image} 
               alt={`Aperçu de ${project.title}`} 
               className="w-full max-h-96 object-contain rounded-lg shadow-md"
@@ -111,7 +124,7 @@ const ProjectDetails = () => {
                   <CarouselItem>
                     <div className="p-1">
                       <div className="flex aspect-video items-center justify-center p-1 relative">
-                        <img 
+                        <ImageWithFallback 
                           src={project.image} 
                           alt={`Image principale de ${project.title}`} 
                           className="w-full h-full object-contain rounded-md"
@@ -124,7 +137,7 @@ const ProjectDetails = () => {
                   <CarouselItem key={index}>
                     <div className="p-1">
                       <div className="flex aspect-video items-center justify-center p-1 relative">
-                        <img 
+                        <ImageWithFallback 
                           src={img} 
                           alt={`Image supplémentaire ${index + 1} de ${project.title}`} 
                           className="w-full h-full object-contain rounded-md"
@@ -186,7 +199,7 @@ const ProjectDetails = () => {
                     <CardTitle className="text-xl">Aperçu</CardTitle>
                   </CardHeader>
                   <CardContent className="flex items-center justify-center p-4">
-                    <img 
+                    <ImageWithFallback 
                       src={project.image} 
                       alt={`Aperçu de ${project.title}`} 
                       className="max-w-full h-auto rounded-md shadow-sm"
