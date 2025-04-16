@@ -2,15 +2,15 @@ import { Project } from '@/types/project';
 
 // Imports pour le projet Scolarité
 //texte pour pouvoir push
-import scol1 from '@/assets/images/Scolarite/Scol1.png';
-import scol2 from '@/assets/images/Scolarite/Scol2.png';
-import scol3 from '@/assets/images/Scolarite/Scol3.png';
-import scol4 from '@/assets/images/Scolarite/Scol4.png';
-import scol5 from '@/assets/images/Scolarite/Scol5.png';
-import scol6 from '@/assets/images/Scolarite/Scol6.png';
-import scol7 from '@/assets/images/Scolarite/Scol7.png';
-import scol8 from '@/assets/images/Scolarite/Scol8.png';
-import scol9 from '@/assets/images/Scolarite/Scol9.png';
+import scol1 from '@/assets/images/Scolarite/Scol1.PNG';
+import scol2 from '@/assets/images/Scolarite/Scol2.PNG';
+import scol3 from '@/assets/images/Scolarite/Scol3.PNG';
+import scol4 from '@/assets/images/Scolarite/Scol4.PNG';
+import scol5 from '@/assets/images/Scolarite/Scol5.PNG';
+import scol6 from '@/assets/images/Scolarite/Scol6.PNG';
+import scol7 from '@/assets/images/Scolarite/Scol7.PNG';
+import scol8 from '@/assets/images/Scolarite/Scol8.PNG';
+import scol9 from '@/assets/images/Scolarite/Scol9.PNG';
 
 // Imports pour le projet Admissions
 import adm1 from '@/assets/images/Admissions/Admissions1.png';
