@@ -32,5 +32,6 @@ export default defineConfig(({ mode }) => ({
       },
     },
   },
+  assetsInclude: ['**/*.PNG', '**/*.png'],
   publicDir: 'public',
 }));
