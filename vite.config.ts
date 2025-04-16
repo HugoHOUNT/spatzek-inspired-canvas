@@ -22,15 +22,13 @@ export default defineConfig(({ mode }) => ({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
+    assetsInlineLimit: 0,
     rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+      },
       output: {
-        assetFileNames: (assetInfo) => {
-          let extType = assetInfo.name?.split('.')[1] || 'unknown';
-          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
-            extType = 'img';
-          }
-          return `assets/${extType}/[name]-[hash][extname]`;
-        },
+        assetFileNames: 'assets/[name][extname]',
       },
     },
   },

@@ -47,6 +47,7 @@ import hotel2 from '@/assets/images/FrequentationHoteliere/FrequentationHotelier
 import hotel3 from '@/assets/images/FrequentationHoteliere/FrequentationHoteliere3.png';
 import hotel4 from '@/assets/images/FrequentationHoteliere/FrequentationHoteliere4.png';
 
+
 export const projectsData: Project[] = [
   {
     id: 1,
