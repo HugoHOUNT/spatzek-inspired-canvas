@@ -1,4 +1,3 @@
-
 import { createContext, useContext, useState, ReactNode } from 'react';
 import { useToast } from '@/components/ui/use-toast';
 
@@ -16,10 +15,10 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | null>(null);
 
-// Utilisateur administrateur avec les nouveaux identifiants
+// Utilisateur administrateur avec les identifiants stockés dans les variables d'environnement
 const ADMIN_USER = {
-  username: 'hountondjihugo@gmail.com',
-  password: 'Azertyuiop1234567890',
+  username: process.env.NEXT_PUBLIC_ADMIN_USERNAME || '',
+  password: process.env.NEXT_PUBLIC_ADMIN_PASSWORD || '',
   isAdmin: true
 };
 
