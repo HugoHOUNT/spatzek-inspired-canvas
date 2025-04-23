@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 import { useToast } from '@/components/ui/use-toast';
+import { loginService } from '@/services/auth';
 
 interface User {
   username: string;
@@ -14,13 +15,6 @@ interface AuthContextType {
 }
 
 const AuthContext = createContext<AuthContextType | null>(null);
-
-// Utilisateur administrateur avec les identifiants stockés dans les variables d'environnement
-const ADMIN_USER = {
-  username: process.env.NEXT_PUBLIC_ADMIN_USERNAME || '',
-  password: process.env.NEXT_PUBLIC_ADMIN_PASSWORD || '',
-  isAdmin: true
-};
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(() => {
@@ -40,29 +34,35 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, [user]);
 
   const login = async (username: string, password: string): Promise<boolean> => {
-    // Simuler une vérification d'authentification
-    if (username === ADMIN_USER.username && password === ADMIN_USER.password) {
-      const userData = {
-        username: ADMIN_USER.username,
-        isAdmin: ADMIN_USER.isAdmin
-      };
-      setUser(userData);
+    try {
+      const response = await loginService(username, password);
+      
+      if (response.success && response.user) {
+        setUser(response.user);
+        
+        toast({
+          title: "Connexion réussie",
+          description: "Vous êtes maintenant connecté en tant qu'administrateur.",
+        });
+        
+        return true;
+      }
       
       toast({
-        title: "Connexion réussie",
-        description: "Vous êtes maintenant connecté en tant qu'administrateur.",
+        title: "Échec de la connexion",
+        description: response.error || "Identifiants incorrects",
+        variant: "destructive",
       });
       
-      return true;
+      return false;
+    } catch (error) {
+      toast({
+        title: "Erreur",
+        description: "Une erreur est survenue lors de la connexion",
+        variant: "destructive",
+      });
+      return false;
     }
-    
-    toast({
-      title: "Échec de la connexion",
-      description: "Nom d'utilisateur ou mot de passe incorrect.",
-      variant: "destructive",
-    });
-    
-    return false;
   };
 
   const logout = () => {
