@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 import { useToast } from '@/components/ui/use-toast';
 
 interface User {
@@ -23,16 +23,30 @@ const ADMIN_USER = {
 };
 
 export function AuthProvider({ children }: { children: ReactNode }) {
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<User | null>(() => {
+    // Récupérer l'état d'authentification du localStorage au chargement
+    const savedUser = localStorage.getItem('user');
+    return savedUser ? JSON.parse(savedUser) : null;
+  });
   const { toast } = useToast();
+
+  // Sauvegarder l'état d'authentification dans le localStorage à chaque changement
+  useEffect(() => {
+    if (user) {
+      localStorage.setItem('user', JSON.stringify(user));
+    } else {
+      localStorage.removeItem('user');
+    }
+  }, [user]);
 
   const login = async (username: string, password: string): Promise<boolean> => {
     // Simuler une vérification d'authentification
     if (username === ADMIN_USER.username && password === ADMIN_USER.password) {
-      setUser({
+      const userData = {
         username: ADMIN_USER.username,
         isAdmin: ADMIN_USER.isAdmin
-      });
+      };
+      setUser(userData);
       
       toast({
         title: "Connexion réussie",
