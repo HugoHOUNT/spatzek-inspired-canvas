@@ -49,16 +49,17 @@ import hotel3 from '@/assets/images/FrequentationHoteliere/FrequentationHotelier
 import hotel4 from '@/assets/images/FrequentationHoteliere/FrequentationHoteliere4.png';
 
 // Sessions et Planification
-import session1 from '@/assets/images/SessionsPlanif/SessionsPlanif1.png';
-import session2 from '@/assets/images/SessionsPlanif/SessionsPlanif2.png';
-import session3 from '@/assets/images/SessionsPlanif/SessionsPlanif3.png';
-import session4 from '@/assets/images/SessionsPlanif/SessionsPlanif4.png';
-import session5 from '@/assets/images/SessionsPlanif/SessionsPlanif5.png';
-import session6 from '@/assets/images/SessionsPlanif/SessionsPlanif6.png';
-import session7 from '@/assets/images/SessionsPlanif/SessionsPlanif7.png';
-import session8 from '@/assets/images/SessionsPlanif/SessionsPlanif8.png';
-import session9 from '@/assets/images/SessionsPlanif/SessionsPlanif9.png';
-import session10 from '@/assets/images/SessionsPlanif/SessionsPlanif10.png';
+// PNG et non pas png
+import session1 from '@/assets/images/SessionsPlanif/SessionsPlanif1.PNG';
+import session2 from '@/assets/images/SessionsPlanif/SessionsPlanif2.PNG';
+import session3 from '@/assets/images/SessionsPlanif/SessionsPlanif3.PNG';
+import session4 from '@/assets/images/SessionsPlanif/SessionsPlanif4.PNG';
+import session5 from '@/assets/images/SessionsPlanif/SessionsPlanif5.PNG';
+import session6 from '@/assets/images/SessionsPlanif/SessionsPlanif6.PNG';
+import session7 from '@/assets/images/SessionsPlanif/SessionsPlanif7.PNG';
+import session8 from '@/assets/images/SessionsPlanif/SessionsPlanif8.PNG';
+import session9 from '@/assets/images/SessionsPlanif/SessionsPlanif9.PNG';
+import session10 from '@/assets/images/SessionsPlanif/SessionsPlanif10.PNG';
 
 // Amélioration Continue
 import amelioration1 from '@/assets/images/AmeliorationContinue/AmeliorationContinue1.png';
