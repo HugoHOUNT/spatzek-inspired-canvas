@@ -99,16 +99,16 @@ export const projectsData: Project[] = [
       objective: "L'objectif principal était de :\n\n- Centraliser les données liées à la création, au suivi et à l'exécution des sessions de formation\n- Permettre une comparaison directe entre les objectifs fixés et les réalisations\n- Optimiser la gestion des ressources humaines (intervenants, prestataires) et logistiques\n- Fournir une interface claire pour appuyer les décisions opérationnelles et stratégiques",
       impact: "Ce tableau de bord a eu un impact notable :\n\n- Vision consolidée et en temps réel de toutes les sessions, par site, programme ou période\n- Suivi détaillé des objectifs atteints et des écarts observés\n- Amélioration de l'allocation des ressources (formateurs, intervenants)\n- Meilleure anticipation des besoins logistiques et humains\n- Réduction des écarts entre planification et exécution\n- Renforcement de la coordination interservices et amélioration de la réactivité globale",
       moreImages: [
-        "/assets/images/SessionsPlanif/Admissions1.png",
-        "/assets/images/SessionsPlanif/Admissions2.png",
-        "/assets/images/SessionsPlanif/Admissions3.png",
-        "/assets/images/SessionsPlanif/Admissions4.png",
-        "/assets/images/SessionsPlanif/Admissions5.png",
-        "/assets/images/SessionsPlanif/Admissions6.png",
-        "/assets/images/SessionsPlanif/Admissions7.png",
-        "/assets/images/SessionsPlanif/Admissions8.png",
-        "/assets/images/SessionsPlanif/Admissions9.png",
-        "/assets/images/SessionsPlanif/Admissions10.png"
+        "/assets/images/SessionsPlanif/Admissions1.PNG",
+        "/assets/images/SessionsPlanif/Admissions2.PNG",
+        "/assets/images/SessionsPlanif/Admissions3.PNG",
+        "/assets/images/SessionsPlanif/Admissions4.PNG",
+        "/assets/images/SessionsPlanif/Admissions5.PNG",
+        "/assets/images/SessionsPlanif/Admissions6.PNG",
+        "/assets/images/SessionsPlanif/Admissions7.PNG",
+        "/assets/images/SessionsPlanif/Admissions8.PNG",
+        "/assets/images/SessionsPlanif/Admissions9.PNG",
+        "/assets/images/SessionsPlanif/Admissions10.PNG"
       ]
     }
   },
