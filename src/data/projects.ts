@@ -62,13 +62,13 @@ import session9 from '@/assets/images/SessionsPlanif/SessionsPlanif9.PNG';
 import session10 from '@/assets/images/SessionsPlanif/SessionsPlanif10.PNG';
 
 // Amélioration Continue
-import amelioration1 from '@/assets/images/AmeliorationContinue/AmeliorationContinue1.png';
-import amelioration2 from '@/assets/images/AmeliorationContinue/AmeliorationContinue2.png';
-import amelioration3 from '@/assets/images/AmeliorationContinue/AmeliorationContinue3.png';
-import amelioration4 from '@/assets/images/AmeliorationContinue/AmeliorationContinue4.png';
-import amelioration5 from '@/assets/images/AmeliorationContinue/AmeliorationContinue5.png';
-import amelioration6 from '@/assets/images/AmeliorationContinue/AmeliorationContinue6.png';
-import amelioration7 from '@/assets/images/AmeliorationContinue/AmeliorationContinue7.png';
+import amelioration1 from '@/assets/images/AmeliorationContinue/AmeliorationContinue1.PNG';
+import amelioration2 from '@/assets/images/AmeliorationContinue/AmeliorationContinue2.PNG';
+import amelioration3 from '@/assets/images/AmeliorationContinue/AmeliorationContinue3.PNG';
+import amelioration4 from '@/assets/images/AmeliorationContinue/AmeliorationContinue4.PNG';
+import amelioration5 from '@/assets/images/AmeliorationContinue/AmeliorationContinue5.PNG';
+import amelioration6 from '@/assets/images/AmeliorationContinue/AmeliorationContinue6.PNG';
+import amelioration7 from '@/assets/images/AmeliorationContinue/AmeliorationContinue7.PNG';
 
 export const projectsData: Project[] = [
   {
