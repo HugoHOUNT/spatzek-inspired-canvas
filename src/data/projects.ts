@@ -48,6 +48,26 @@ import hotel2 from '@/assets/images/FrequentationHoteliere/FrequentationHotelier
 import hotel3 from '@/assets/images/FrequentationHoteliere/FrequentationHoteliere3.png';
 import hotel4 from '@/assets/images/FrequentationHoteliere/FrequentationHoteliere4.png';
 
+// Sessions et Planification
+import session1 from '@/assets/images/SessionsPlanif/SessionsPlanif1.png';
+import session2 from '@/assets/images/SessionsPlanif/SessionsPlanif2.png';
+import session3 from '@/assets/images/SessionsPlanif/SessionsPlanif3.png';
+import session4 from '@/assets/images/SessionsPlanif/SessionsPlanif4.png';
+import session5 from '@/assets/images/SessionsPlanif/SessionsPlanif5.png';
+import session6 from '@/assets/images/SessionsPlanif/SessionsPlanif6.png';
+import session7 from '@/assets/images/SessionsPlanif/SessionsPlanif7.png';
+import session8 from '@/assets/images/SessionsPlanif/SessionsPlanif8.png';
+import session9 from '@/assets/images/SessionsPlanif/SessionsPlanif9.png';
+import session10 from '@/assets/images/SessionsPlanif/SessionsPlanif10.png';
+
+// Amélioration Continue
+import amelioration1 from '@/assets/images/AmeliorationContinue/AmeliorationContinue1.png';
+import amelioration2 from '@/assets/images/AmeliorationContinue/AmeliorationContinue2.png';
+import amelioration3 from '@/assets/images/AmeliorationContinue/AmeliorationContinue3.png';
+import amelioration4 from '@/assets/images/AmeliorationContinue/AmeliorationContinue4.png';
+import amelioration5 from '@/assets/images/AmeliorationContinue/AmeliorationContinue5.png';
+import amelioration6 from '@/assets/images/AmeliorationContinue/AmeliorationContinue6.png';
+import amelioration7 from '@/assets/images/AmeliorationContinue/AmeliorationContinue7.png';
 
 export const projectsData: Project[] = [
   {
@@ -93,23 +113,12 @@ export const projectsData: Project[] = [
     year: 2025,
     involvement: "Travail d'équipe",
     status: "En cours",
-    image: "/assets/images/SessionsPlanif/Admissions1.png",
+    image: session1,
     details: {
       context: "L'organisation gère un portefeuille large et diversifié de sessions de formation, réparties sur plusieurs sites administratifs, thématiques et catégories de programmes. Cette diversité rendait complexe le suivi en temps réel de la planification, de l'exécution et de la performance des sessions. Il devenait nécessaire de centraliser ces données dans un outil unique et interactif afin d'améliorer la coordination et d'aligner les efforts avec les objectifs pédagogiques et stratégiques.",
       objective: "L'objectif principal était de :\n\n- Centraliser les données liées à la création, au suivi et à l'exécution des sessions de formation\n- Permettre une comparaison directe entre les objectifs fixés et les réalisations\n- Optimiser la gestion des ressources humaines (intervenants, prestataires) et logistiques\n- Fournir une interface claire pour appuyer les décisions opérationnelles et stratégiques",
       impact: "Ce tableau de bord a eu un impact notable :\n\n- Vision consolidée et en temps réel de toutes les sessions, par site, programme ou période\n- Suivi détaillé des objectifs atteints et des écarts observés\n- Amélioration de l'allocation des ressources (formateurs, intervenants)\n- Meilleure anticipation des besoins logistiques et humains\n- Réduction des écarts entre planification et exécution\n- Renforcement de la coordination interservices et amélioration de la réactivité globale",
-      moreImages: [
-        "/assets/images/SessionsPlanif/Admissions1.PNG",
-        "/assets/images/SessionsPlanif/Admissions2.PNG",
-        "/assets/images/SessionsPlanif/Admissions3.PNG",
-        "/assets/images/SessionsPlanif/Admissions4.PNG",
-        "/assets/images/SessionsPlanif/Admissions5.PNG",
-        "/assets/images/SessionsPlanif/Admissions6.PNG",
-        "/assets/images/SessionsPlanif/Admissions7.PNG",
-        "/assets/images/SessionsPlanif/Admissions8.PNG",
-        "/assets/images/SessionsPlanif/Admissions9.PNG",
-        "/assets/images/SessionsPlanif/Admissions10.PNG"
-      ]
+      moreImages: [session1, session2, session3, session4, session5, session6, session7, session8, session9, session10]
     }
   },
   {
@@ -121,20 +130,12 @@ export const projectsData: Project[] = [
     year: 2024,
     involvement: "Travail d'équipe",
     status: "Terminé",
-    image: "/assets/images/AmeliorationContinue/AmeliorationContinue1.png",
+    image: amelioration1,
     details: {
       context: "Dans une dynamique de qualité et d'amélioration continue, il est essentiel pour une organisation de suivre efficacement ses actions correctives, préventives et d'amélioration. Les exigences des normes de certification, ainsi que les attentes accrues des parties prenantes internes et externes, imposent une rigueur dans la gestion de ces processus. Face à la dispersion des informations dans différents outils et formats, le besoin d'une solution centralisée de pilotage est devenu évident.",
       objective: "L'objectif de ce projet est double :\n\n1. Piloter efficacement la performance qualité en garantissant un suivi précis des actions d'amélioration.\n2. Faciliter la communication transversale entre les équipes, en rendant l'information accessible et compréhensible de tous.\n\nCela contribue à renforcer la culture d'amélioration continue au sein de l'organisation.",
       impact: "Ce tableau de bord a permis :\n\n- Une centralisation de toutes les actions d'amélioration (correctives, préventives, satisfaction...)\n- Une meilleure traçabilité des actions et de leurs responsables\n- Un suivi visuel et intuitif de l'état d'avancement, par origine ou type de demande\n- Une priorisation claire des actions à traiter\n- Une réactivité accrue des équipes qualité et opérationnelles\n- Une meilleure préparation aux audits qualité grâce à une traçabilité rigoureuse",
-      moreImages: [
-        "/assets/images/AmeliorationContinue/AmeliorationContinue1.png",
-        "/assets/images/AmeliorationContinue/AmeliorationContinue2.png",
-        "/assets/images/AmeliorationContinue/AmeliorationContinue3.png",
-        "/assets/images/AmeliorationContinue/AmeliorationContinue4.png",
-        "/assets/images/AmeliorationContinue/AmeliorationContinue5.png",
-        "/assets/images/AmeliorationContinue/AmeliorationContinue6.png",
-        "/assets/images/AmeliorationContinue/AmeliorationContinue7.png"
-      ]
+      moreImages: [amelioration1, amelioration2, amelioration3, amelioration4, amelioration5, amelioration6, amelioration7]
     }
   },
   {
